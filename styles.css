@@ -135,8 +135,10 @@ a:hover {
 
 .lang-switch {
   display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
   padding: 3px;
-  border-radius: 999px;
+  border-radius: 14px;
   border: 1px solid var(--border);
   background: var(--surface-subtle);
 }
@@ -146,10 +148,11 @@ a:hover {
   background: transparent;
   color: var(--text-muted);
   font-weight: 700;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  min-height: 36px;
-  border-radius: 999px;
+  font-size: 0.76rem;
+  padding: 6px 9px;
+  min-height: 34px;
+  min-width: 34px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
