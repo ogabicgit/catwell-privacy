@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CatWell</title>
+  <meta name="description" content="Informativa completa sulla privacy (GDPR e Google Play) per l'applicazione Android CatWell.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">CW</span>
+        <span>CatWell</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Menu principale">
+          <a href="index.html" data-i18n-it="Supporto" data-i18n-en="Support">Supporto</a>
+          <a href="privacy-policy.html" aria-current="page" data-i18n-it="Privacy Policy" data-i18n-en="Privacy Policy">Privacy Policy</a>
+          <a href="account-deletion.html" data-i18n-it="Eliminazione Account" data-i18n-en="Account Deletion">Eliminazione Account</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang-btn="it" aria-pressed="true">IT</button>
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ITALIAN PRIVACY POLICY -->
+    <div data-lang="it" id="it">
+      <section class="hero">
+        <span class="eyebrow">Informativa Privacy • GDPR (UE 2016/679)</span>
+        <h1>Privacy Policy di CatWell</h1>
+        <p class="lead">
+          Questa informativa descrive come l'applicazione Android <strong>CatWell</strong> raccoglie,
+          utilizza, archivia e protegge i tuoi dati personali nel rispetto del Regolamento UE 2016/679
+          (GDPR) e delle norme del programma per sviluppatori di Google Play.
+        </p>
+        <div class="meta-row">
+          <span><strong>Ultimo aggiornamento:</strong> 22 Novembre 2026</span>
+          <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
+          <span><strong>Titolare:</strong> Gabriele O. (<a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a>)</span>
+        </div>
+        <div class="toc">
+          <a href="#it-titolare">1. Titolare</a>
+          <a href="#it-dati">2. Dati trattati</a>
+          <a href="#it-ai">3. Funzioni AI</a>
+          <a href="#it-permessi">4. Permessi Android</a>
+          <a href="#it-terze-parti">5. Fornitori terzi</a>
+          <a href="#it-sicurezza">6. Sicurezza</a>
+          <a href="#it-diritti">7. Diritti e Cancellazione</a>
+        </div>
+      </section>
+
+      <section class="card" id="it-titolare">
+        <h2>1. Titolare del trattamento e contatti</h2>
+        <p>
+          Il Titolare del trattamento dei dati per l'app <strong>CatWell</strong> è lo sviluppatore
+          indipendente <strong>Gabriele O.</strong>.
+        </p>
+        <p>
+          Per qualsiasi richiesta sulla privacy o sull'esercizio dei diritti GDPR puoi scrivere a:
+          <a href="mailto:ogabic73@gmail.com?subject=Privacy%20CatWell"><strong>ogabic73@gmail.com</strong></a>.
+        </p>
+      </section>
+
+      <section class="card" id="it-dati">
+        <h2>2. Tipologie di dati raccolti e modalità di archiviazione</h2>
+        <p>
+          CatWell adotta un approccio <strong>offline-first</strong>: puoi usare il diario locale
+          del tuo gatto anche senza creare un account. La sincronizzazione cloud è completamente facoltativa.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Categoria di dati</th>
+                <th>Esempi concreti</th>
+                <th>Dove vengono salvati</th>
+                <th>Obbligatorio?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Account Google (autenticazione)</strong></td>
+                <td>ID utente Firebase (UID), indirizzo email, nome visualizzato del profilo Google.</td>
+                <td>Firebase Authentication &amp; profilo utente Cloud Firestore.</td>
+                <td>No (solo se attivi Backup Cloud o Condivisione Famiglia).</td>
+              </tr>
+              <tr>
+                <td><strong>Profili gatti e diario sanitario</strong></td>
+                <td>Nome, razza, data di nascita, sesso, peso, microchip, vaccinazioni, visite veterinarie, cure ricorrenti, diario salute, note, storie e miniature foto.</td>
+                <td>Database locale cifrato sul dispositivo (Room) e, se accedi con Google, su Cloud Firestore (personale o gruppo Famiglia).</td>
+                <td>Inseriti volontariamente dall'utente.</td>
+              </tr>
+              <tr>
+                <td><strong>Contatti veterinario e impostazioni</strong></td>
+                <td>Nome/telefono clinica veterinaria salvato dall'utente, lingua app, unità peso, tema grafico, orari notifiche.</td>
+                <td>Memoria privata del dispositivo (SharedPreferences locali).</td>
+                <td>Facoltativi.</td>
+              </tr>
+              <tr>
+                <td><strong>Foto per funzioni AI</strong></td>
+                <td>Immagini del gatto selezionate dall'utente per Scanner Razze AI o AI Story.</td>
+                <td>Elaborate temporaneamente dai servizi Google Gemini (Firebase AI Logic o API diretta con chiave personale); le foto del diario restano sul dispositivo e (in formato miniatura compressa) nel backup Firestore se attivo.</td>
+                <td>No (solo su esplicita richiesta dell'utente).</td>
+              </tr>
+              <tr>
+                <td><strong>Chiave API Gemini personale (opzionale)</strong></td>
+                <td>Eventuale chiave personale Google AI Studio inserita dall'utente nelle Impostazioni.</td>
+                <td><strong>Solo localmente sul dispositivo</strong>, cifrata con <strong>Android Keystore (AES-256-GCM)</strong>. Non viene mai sincronizzata su Firestore né inviata a server dello sviluppatore.</td>
+                <td>No (facoltativa).</td>
+              </tr>
+              <tr>
+                <td><strong>Dati di sicurezza anti-abuso</strong></td>
+                <td>Token di attestazione dispositivo generati da Firebase App Check / reCAPTCHA Enterprise.</td>
+                <td>Elaborati da Google Firebase per proteggere le API AI da abusi automatici.</td>
+                <td>Automatico quando si usano le funzioni cloud/AI Firebase.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>Cosa NON raccogliamo:</strong> CatWell non integra reti pubblicitarie, non usa
+          l'ID pubblicitario Android (AD_ID), non traccia la posizione GPS, non legge i contatti della
+          rubrica e non vende né cede dati personali a terzi per scopi di marketing.
+        </p>
+      </section>
+
+      <section class="card" id="it-ai">
+        <h2>3. Elaborazione tramite Intelligenza Artificiale (AI)</h2>
+        <p>
+          Le funzioni <strong>Scanner Razze AI</strong> e <strong>AI Story</strong> inviano le foto
+          esplicitamente scelte dall'utente (insieme alla lingua selezionata e al contesto minimo del
+          profilo del gatto, come nome ed età) ai modelli <strong>Google Gemini</strong> tramite
+          <strong>Firebase AI Logic</strong> (o tramite l'API ufficiale Google Gemini se l'utente ha
+          inserito volontariamente una propria chiave API personale).
+        </p>
+        <ul>
+          <li>Le foto vengono prima pre-filtrate sul dispositivo con <strong>Google ML Kit</strong> on-device per ridurre chiamate inutili.</li>
+          <li>Nessuna immagine viene inviata all'AI in background o senza un'azione esplicita dell'utente.</li>
+          <li>Gli output dell'AI (stima razza e testi narrativi) hanno scopo puramente informativo e ricreativo.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="it-permessi">
+        <h2>4. Permessi Android utilizzati</h2>
+        <ul>
+          <li><code>CAMERA</code> (opzionale, richiesto a runtime): usato solo quando scegli di scattare una foto del gatto dalla fotocamera per lo scanner razze o il diario.</li>
+          <li><code>POST_NOTIFICATIONS</code> (opzionale, Android 13+): usato per mostrare i promemoria di vaccinazioni, visite veterinarie, cure ricorrenti e riepilogo giornaliero.</li>
+          <li><code>SCHEDULE_EXACT_ALARM</code>: usato per recapitare puntualmente i promemoria sanitari e terapeutici programmati dall'utente (con fallback automatico se non concesso).</li>
+          <li><code>RECEIVE_BOOT_COMPLETED</code> &amp; <code>VIBRATE</code>: usati per ripristinare i promemoria locali dopo il riavvio del telefono e attivare la vibrazione delle notifiche.</li>
+          <li><code>INTERNET</code>: necessario per Google Sign-In, sincronizzazione Cloud Firestore e funzioni AI.</li>
+        </ul>
+        <p>
+          <strong>Nessun permesso di accesso esteso alla galleria:</strong> per scegliere le foto
+          CatWell utilizza esclusivamente lo strumento di sistema <em>Android Photo Picker</em>,
+          che concede accesso temporaneo solo alle singole immagini selezionate dall'utente.
+        </p>
+      </section>
+
+      <section class="card" id="it-terze-parti">
+        <h2>5. Condivisione dei dati e fornitori terzi</h2>
+        <p>
+          Per fornire l'autenticazione, il backup cloud e le funzionalità AI, CatWell si avvale
+          esclusivamente dei seguenti servizi di <strong>Google LLC / Firebase</strong> in qualità di
+          responsabili del trattamento:
+        </p>
+        <ul>
+          <li><strong>Google Sign-In / Firebase Authentication</strong> (gestione accesso utente).</li>
+          <li><strong>Google Cloud Firestore</strong> (backup opzionale e gruppi Famiglia condivisi solo con i membri invitati dall'utente tramite codice invito).</li>
+          <li><strong>Firebase AI Logic / Google Gemini API</strong> (analisi immagini razza e generazione storie AI).</li>
+          <li><strong>Firebase App Check / reCAPTCHA Enterprise</strong> (protezione antifrode e integrità dell'app).</li>
+        </ul>
+        <p>
+          Maggiori informazioni sulle politiche di Google sono disponibili su
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
+          e <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a>.
+          Eventuali trasferimenti verso paesi extra-UE avvengono sulla base delle Clausole Contrattuali
+          Standard (SCC) e delle garanzie previste dal GDPR adottate da Google Cloud.
+        </p>
+      </section>
+
+      <section class="card" id="it-sicurezza">
+        <h2>6. Sicurezza e conservazione dei dati</h2>
+        <ul>
+          <li><strong>Cifratura in transito:</strong> tutte le comunicazioni di rete avvengono esclusivamente su HTTPS/TLS (traffico in chiaro disabilitato a livello di sistema).</li>
+          <li><strong>Protezione locale:</strong> il backup automatico non cifrato di Android (`allowBackup`) è disabilitato; l'eventuale chiave API Gemini personale è cifrata con <strong>Android Keystore (AES-256-GCM)</strong>.</li>
+          <li><strong>Isolamento cloud:</strong> le Security Rules di Firestore applicano un modello <em>default-deny</em> con accesso limitato al proprietario autenticato (`uid`) o ai membri esplicitamente appartenenti allo stesso gruppo Famiglia.</li>
+          <li><strong>Conservazione:</strong> i dati locali restano sul dispositivo finché non li elimini o disinstalli l'app; i dati cloud restano attivi finché mantieni l'account o finché non richiedi la cancellazione.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="it-diritti">
+        <h2>7. Diritti dell'interessato, minori e cancellazione</h2>
+        <p>
+          Ai sensi degli artt. 15–22 del GDPR hai diritto di accedere ai tuoi dati, rettificarli,
+          chiederne la cancellazione, limitarne il trattamento, opporti al trattamento e proporre
+          reclamo all'Autorità Garante per la protezione dei dati personali.
+        </p>
+        <p>
+          <strong>Eliminazione immediata:</strong> puoi cancellare in autonomia il tuo account e tutti
+          i dati locali e cloud da <em>Impostazioni → Privacy e dati → Elimina account e tutti i dati</em>,
+          oppure seguendo la procedura web dedicata:
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="account-deletion.html">Vai alla pagina Eliminazione Account e Dati</a>
+        </div>
+
+        <h3>Minori</h3>
+        <p>
+          CatWell non è rivolta a minori di 13 anni (o all'età minima prevista dal proprio Paese UE per
+          il consenso digitale) e non raccoglie consapevolmente dati personali di bambini.
+        </p>
+
+        <h3>Esportazione PDF e Condivisione Famiglia</h3>
+        <p>
+          Quando esporti un riepilogo PDF o inviti un familiare tramite codice invito, sei tu a
+          controllare con chi condividere il file o l'accesso al gruppo; puoi lasciare il gruppo o
+          rimuovere membri in qualsiasi momento dalle Impostazioni.
+        </p>
+
+        <div class="callout">
+          <strong>Disclaimer medico-veterinario:</strong> tutte le informazioni su razze, nutrizione,
+          alimenti vietati, comportamenti e risultati AI presenti in CatWell hanno finalità esclusivamente
+          informative e non sostituiscono in alcun modo la visita o il consulto del medico veterinario.
+        </div>
+
+        <h3>Modifiche a questa Privacy Policy</h3>
+        <p>
+          Eventuali aggiornamenti saranno pubblicati su questa pagina con la data di revisione aggiornata.
+        </p>
+      </section>
+    </div>
+
+    <!-- ENGLISH PRIVACY POLICY -->
+    <div data-lang="en" id="en" class="lang-hidden">
+      <section class="hero">
+        <span class="eyebrow">Privacy Notice • GDPR (EU 2016/679)</span>
+        <h1>CatWell Privacy Policy</h1>
+        <p class="lead">
+          This Privacy Policy explains how the <strong>CatWell</strong> Android application collects,
+          uses, stores, and safeguards your personal data in accordance with the EU General Data
+          Protection Regulation (GDPR) and Google Play Developer Program policies.
+        </p>
+        <div class="meta-row">
+          <span><strong>Last Updated:</strong> November 22, 2026</span>
+          <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
+          <span><strong>Data Controller:</strong> Gabriele O. (<a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a>)</span>
+        </div>
+        <div class="toc">
+          <a href="#en-controller">1. Controller</a>
+          <a href="#en-data">2. Data Collected</a>
+          <a href="#en-ai">3. AI Features</a>
+          <a href="#en-permissions">4. Permissions</a>
+          <a href="#en-third-parties">5. Third Parties</a>
+          <a href="#en-security">6. Security</a>
+          <a href="#en-rights">7. Rights &amp; Deletion</a>
+        </div>
+      </section>
+
+      <section class="card" id="en-controller">
+        <h2>1. Data Controller &amp; Contact</h2>
+        <p>
+          The Data Controller for the <strong>CatWell</strong> application is independent developer
+          <strong>Gabriele O.</strong>.
+        </p>
+        <p>
+          For any privacy inquiry or GDPR request, contact:
+          <a href="mailto:ogabic73@gmail.com?subject=CatWell%20Privacy"><strong>ogabic73@gmail.com</strong></a>.
+        </p>
+      </section>
+
+      <section class="card" id="en-data">
+        <h2>2. Data We Process &amp; How It Is Stored</h2>
+        <p>
+          CatWell is designed with an <strong>offline-first</strong> architecture: you can manage your
+          cat's local health diary without signing in. Cloud synchronization is completely optional.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Examples</th>
+                <th>Storage Location</th>
+                <th>Required?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Account (Authentication)</strong></td>
+                <td>Firebase User ID (UID), email address, Google profile display name.</td>
+                <td>Firebase Authentication &amp; Cloud Firestore user profile.</td>
+                <td>No (only if you enable Cloud Backup or Family Sync).</td>
+              </tr>
+              <tr>
+                <td><strong>Cat Profiles &amp; Health Diary</strong></td>
+                <td>Cat name, breed, birth date, gender, weight logs, microchip, vaccinations, vet visits, recurring care, notes, stories, and compressed photo thumbnails.</td>
+                <td>Local device database (Room) and, when signed in with Google, Cloud Firestore (personal or shared Family group).</td>
+                <td>Entered voluntarily by the user.</td>
+              </tr>
+              <tr>
+                <td><strong>Vet Contact &amp; App Preferences</strong></td>
+                <td>User-entered vet phone/clinic details, app language, weight unit, theme, reminder schedules.</td>
+                <td>Private on-device storage (SharedPreferences).</td>
+                <td>Optional.</td>
+              </tr>
+              <tr>
+                <td><strong>Photos for AI Features</strong></td>
+                <td>Cat photos explicitly chosen by the user for AI Breed Scanner or AI Story.</td>
+                <td>Processed transiently by Google Gemini (via Firebase AI Logic or direct Gemini API when using a personal key); diary photos stay on your device and (as compressed thumbnails) in Firestore if cloud sync is enabled.</td>
+                <td>No (user-triggered only).</td>
+              </tr>
+              <tr>
+                <td><strong>Personal Gemini API Key (Optional)</strong></td>
+                <td>Optional Google AI Studio API key entered by the user in Settings.</td>
+                <td><strong>Device-only</strong>, encrypted via <strong>Android Keystore (AES-256-GCM)</strong>. Never uploaded to Firestore or developer servers.</td>
+                <td>No (optional).</td>
+              </tr>
+              <tr>
+                <td><strong>Anti-Abuse App Integrity Data</strong></td>
+                <td>App attestation tokens generated by Firebase App Check / reCAPTCHA Enterprise.</td>
+                <td>Processed by Google Firebase to protect cloud/AI endpoints from abuse.</td>
+                <td>Automatic when using Firebase cloud/AI services.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>What we do NOT collect:</strong> CatWell contains no advertising SDKs, does not
+          access the Android Advertising ID (AD_ID), does not track GPS location, does not read your
+          phone contacts, and never sells or shares personal data for marketing.
+        </p>
+      </section>
+
+      <section class="card" id="en-ai">
+        <h2>3. Artificial Intelligence (AI) Processing</h2>
+        <p>
+          The <strong>AI Breed Scanner</strong> and <strong>AI Story</strong> features transmit user-selected
+          cat photos (along with app language and minimal pet context such as cat name/age) to
+          <strong>Google Gemini</strong> models through <strong>Firebase AI Logic</strong> (or directly
+          to Google's Gemini API if you configure your own personal API key).
+        </p>
+        <ul>
+          <li>Images are pre-filtered on-device using <strong>Google ML Kit</strong> before cloud inference.</li>
+          <li>No photo is ever sent to AI services in the background or without an explicit tap.</li>
+          <li>AI outputs are informational and creative only, not veterinary advice.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="en-permissions">
+        <h2>4. Android Permissions</h2>
+        <ul>
+          <li><code>CAMERA</code> (optional, runtime): used only when taking a cat photo for breed scanning or diary entries.</li>
+          <li><code>POST_NOTIFICATIONS</code> (optional, Android 13+): used to deliver vaccination, appointment, care, and daily digest reminders.</li>
+          <li><code>SCHEDULE_EXACT_ALARM</code>: used to deliver time-sensitive vaccination and medication reminders accurately (with automatic fallback if disabled).</li>
+          <li><code>RECEIVE_BOOT_COMPLETED</code> &amp; <code>VIBRATE</code>: used to restore scheduled local reminders after device reboot and enable notification vibration.</li>
+          <li><code>INTERNET</code>: required for Google Sign-In, Cloud Firestore sync, and AI features.</li>
+        </ul>
+        <p>
+          <strong>Zero broad gallery permissions:</strong> CatWell uses the system <em>Android Photo
+          Picker</em>, granting one-time access strictly to the specific images you pick.
+        </p>
+      </section>
+
+      <section class="card" id="en-third-parties">
+        <h2>5. Third-Party Service Providers</h2>
+        <p>
+          CatWell relies exclusively on <strong>Google LLC / Firebase</strong> infrastructure as data processors:
+        </p>
+        <ul>
+          <li><strong>Google Sign-In / Firebase Authentication</strong> (account sign-in).</li>
+          <li><strong>Google Cloud Firestore</strong> (optional cloud backup and user-invited Family Sync groups).</li>
+          <li><strong>Firebase AI Logic / Google Gemini API</strong> (breed analysis and AI story text generation).</li>
+          <li><strong>Firebase App Check / reCAPTCHA Enterprise</strong> (fraud and abuse prevention).</li>
+        </ul>
+        <p>
+          Learn more at
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
+          and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a>.
+          Cross-border transfers outside the EEA rely on Google Cloud's GDPR Standard Contractual Clauses (SCCs).
+        </p>
+      </section>
+
+      <section class="card" id="en-security">
+        <h2>6. Security &amp; Data Retention</h2>
+        <ul>
+          <li><strong>Encryption in transit:</strong> all network traffic is strictly HTTPS/TLS (cleartext HTTP is blocked at OS level).</li>
+          <li><strong>On-device protection:</strong> Android unencrypted auto-backup (`allowBackup`) is disabled; any optional personal Gemini API key is encrypted with <strong>Android Keystore (AES-256-GCM)</strong>.</li>
+          <li><strong>Cloud access control:</strong> Firestore Security Rules enforce default-deny isolation scoped to your authenticated UID or explicitly joined Family group.</li>
+          <li><strong>Retention:</strong> local data remains on your device until deleted or uninstalled; cloud data is retained until you delete your account/data.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="en-rights">
+        <h2>7. Your Rights, Children's Privacy &amp; Deletion</h2>
+        <p>
+          Under GDPR (Articles 15–22), you have the right to access, rectify, erase, restrict, or
+          object to the processing of your personal data, and to lodge a complaint with your supervisory
+          data protection authority.
+        </p>
+        <p>
+          <strong>Self-service deletion:</strong> delete your account and all local/cloud data directly
+          inside CatWell via <em>Settings → Privacy &amp; Data → Delete account and all data</em>, or
+          follow our dedicated web deletion guide:
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="account-deletion.html#en">Open Account &amp; Data Deletion Page</a>
+        </div>
+
+        <h3>Children's Privacy</h3>
+        <p>
+          CatWell is not intended for children under 13 (or the minimum digital consent age in your
+          jurisdiction) and does not knowingly collect personal data from children.
+        </p>
+
+        <div class="callout">
+          <strong>Veterinary Disclaimer:</strong> All breed, nutrition, forbidden food, behavior, and
+          AI content in CatWell is for informational purposes only and never replaces professional
+          veterinary care.
+        </div>
+
+        <h3>Changes to This Policy</h3>
+        <p>
+          Updates to this Privacy Policy will be published on this page with an updated revision date.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 CatWell — Gabriele O.</span>
+    <span><a href="index.html">Support</a> · <a href="account-deletion.html">Account Deletion</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-lang]').forEach(function (el) {
+          el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
+        });
+        document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+          var active = btn.getAttribute('data-lang-btn') === lang;
+          btn.classList.toggle('active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        document.querySelectorAll('[data-i18n-it]').forEach(function (el) {
+          el.textContent = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-it');
+        });
+      }
+      var hash = window.location.hash || '';
+      var initial = (hash === '#en' || hash.indexOf('#en-') === 0 || new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'it';
+      setLang(initial);
+      document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setLang(btn.getAttribute('data-lang-btn'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

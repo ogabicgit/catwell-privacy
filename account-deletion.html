@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminazione Account e Dati — CatWell</title>
+  <meta name="description" content="Come eliminare definitivamente l'account Google collegato e tutti i dati personali associati all'app Android CatWell.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">CW</span>
+        <span>CatWell</span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Menu principale">
+          <a href="index.html" data-i18n-it="Supporto" data-i18n-en="Support">Supporto</a>
+          <a href="privacy-policy.html" data-i18n-it="Privacy Policy" data-i18n-en="Privacy Policy">Privacy Policy</a>
+          <a href="account-deletion.html" aria-current="page" data-i18n-it="Eliminazione Account" data-i18n-en="Account Deletion">Eliminazione Account</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang-btn="it" aria-pressed="true">IT</button>
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ITALIAN CONTENT -->
+    <div data-lang="it" id="it">
+      <section class="hero">
+        <span class="eyebrow">Google Play Data Safety • Diritti GDPR</span>
+        <h1>Eliminazione Account e Dati di CatWell</h1>
+        <p class="lead">
+          Puoi eliminare in qualsiasi momento il tuo account collegato a <strong>CatWell</strong> e tutti
+          i dati associati (profili gatti, diario sanitario, vaccinazioni, visite, storie e backup cloud)
+          direttamente dall'app oppure tramite richiesta email se hai già disinstallato l'app.
+        </p>
+        <div class="meta-row">
+          <span><strong>App:</strong> CatWell (<code>com.gabrielo.catwell</code>)</span>
+          <span><strong>Sviluppatore:</strong> Gabriele O.</span>
+          <span><strong>Contatto:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Opzione 1 — Cancellazione immediata direttamente nell'app (Consigliata)</h2>
+        <p>Se hai ancora CatWell installata sul dispositivo, l'eliminazione è immediata e autonoma:</p>
+        <ol>
+          <li>Apri <strong>CatWell</strong> sul tuo smartphone Android.</li>
+          <li>Tocca l'icona <strong>Impostazioni</strong> (ingranaggio) in alto a destra.</li>
+          <li>Scorri fino alla sezione <strong>Privacy e dati</strong>.</li>
+          <li>Tocca <strong>Elimina account e tutti i dati</strong>.</li>
+          <li>Conferma l'operazione. Per motivi di sicurezza, se hai effettuato l'accesso Google molto tempo fa, l'app ti chiederà un rapido <em>re-login Google</em> prima di rimuovere definitivamente l'account Firebase Auth.</li>
+        </ol>
+        <div class="callout-danger">
+          <strong>Attenzione:</strong> l'operazione è irreversibile. Tutti i dati locali e cloud
+          personali vengono rimossi definitivamente e non potranno essere recuperati.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Opzione 2 — Richiesta via email (se hai già disinstallato l'app)</h2>
+        <p>
+          Se non hai più accesso all'app installata, puoi richiedere la cancellazione completa del tuo
+          account e dei tuoi dati cloud scrivendo dallo <strong>stesso indirizzo email Google</strong>
+          usato per accedere a CatWell:
+        </p>
+        <ul>
+          <li><strong>Destinatario:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></li>
+          <li><strong>Oggetto consigliato:</strong> <code>Richiesta eliminazione account e dati - CatWell</code></li>
+          <li><strong>Contenuto:</strong> indica l'email dell'account Google associato a CatWell e se desideri eliminare l'intero account oppure solo specifici dati cloud.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-danger" href="mailto:ogabic73@gmail.com?subject=Richiesta%20eliminazione%20account%20e%20dati%20-%20CatWell&amp;body=Ciao%2C%0A%0AChiedo%20l%27eliminazione%20definitiva%20del%20mio%20account%20CatWell%20e%20di%20tutti%20i%20dati%20cloud%20associati.%0A%0AEmail%20account%20Google%20usato%20in%20CatWell%3A%20%0A%0AGrazie.">
+            Invia richiesta di eliminazione via Email
+          </a>
+        </div>
+        <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.9rem;">
+          Dopo una breve verifica di titolarità dell'indirizzo email, la cancellazione viene completata
+          di norma entro 7 giorni lavorativi e comunque <strong>entro un massimo di 30 giorni</strong>,
+          con email finale di conferma.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Quali dati vengono eliminati e tempi di conservazione</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo di dato</th>
+                <th>Esito alla cancellazione</th>
+                <th>Conservazione residua</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Account Firebase Authentication</strong> (UID, email, nome)</td>
+                <td>Eliminato definitivamente.</td>
+                <td>Nessuna (0 giorni).</td>
+              </tr>
+              <tr>
+                <td><strong>Dati cloud personali su Firestore</strong> (profili gatti, vaccini, visite, cure, pesi, diario salute, storie e miniature foto)</td>
+                <td>Eliminati definitivamente.</td>
+                <td>Nessuna (0 giorni).</td>
+              </tr>
+              <tr>
+                <td><strong>Gruppi Famiglia condivisi</strong></td>
+                <td>L'utente viene rimosso dal gruppo; se era l'unico membro/proprietario senza altri membri, il gruppo viene eliminato.</td>
+                <td>I dati condivisi di un gruppo con altri membri attivi restano accessibili agli altri membri del nucleo familiare, senza più il riferimento del tuo account.</td>
+              </tr>
+              <tr>
+                <td><strong>Dati locali sul dispositivo</strong> (database Room, preferenze, foto locali, eventuale chiave API Gemini cifrata in Android Keystore)</td>
+                <td>Cancellati immediatamente con l'eliminazione in-app oppure alla disinstallazione dell'app.</td>
+                <td>Nessuna (solo memoria privata del tuo telefono).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Non tratteniamo copie nascoste né profili commerciali dopo l'eliminazione. Per maggiori
+          dettagli consulta la <a href="privacy-policy.html">Privacy Policy completa di CatWell</a>.
+        </p>
+      </section>
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+    <div data-lang="en" id="en" class="lang-hidden">
+      <section class="hero">
+        <span class="eyebrow">Google Play Data Safety • GDPR Rights</span>
+        <h1>CatWell Account &amp; Data Deletion</h1>
+        <p class="lead">
+          You can permanently delete your linked <strong>CatWell</strong> account and all associated
+          data (cat profiles, health diary, vaccinations, appointments, stories, and cloud backups)
+          directly inside the app at any time, or via email if you have already uninstalled the app.
+        </p>
+        <div class="meta-row">
+          <span><strong>App:</strong> CatWell (<code>com.gabrielo.catwell</code>)</span>
+          <span><strong>Developer:</strong> Gabriele O.</span>
+          <span><strong>Contact:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Option 1 — Instant Deletion Inside the App (Recommended)</h2>
+        <p>If CatWell is still installed on your Android device, deletion is immediate and self-service:</p>
+        <ol>
+          <li>Open <strong>CatWell</strong> on your Android phone.</li>
+          <li>Tap the <strong>Settings</strong> (gear) icon in the top-right corner.</li>
+          <li>Scroll to the <strong>Privacy &amp; Data</strong> section.</li>
+          <li>Tap <strong>Delete account and all data</strong>.</li>
+          <li>Confirm deletion. For security, if your Google session is old, CatWell will ask you to re-authenticate with Google before permanently removing your Firebase Authentication account.</li>
+        </ol>
+        <div class="callout-danger">
+          <strong>Warning:</strong> Deletion is permanent and cannot be undone. All local and personal
+          cloud records will be permanently erased.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Option 2 — Email Request (If You Already Uninstalled the App)</h2>
+        <p>
+          If you no longer have CatWell installed, request complete account and cloud data deletion by
+          sending an email from the <strong>same Google account email address</strong> used in CatWell:
+        </p>
+        <ul>
+          <li><strong>Recipient:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></li>
+          <li><strong>Subject:</strong> <code>Account and Data Deletion Request - CatWell</code></li>
+          <li><strong>Details:</strong> Include the Google email address linked to CatWell and specify whether you want full account deletion or removal of specific cloud data.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-danger" href="mailto:ogabic73@gmail.com?subject=Account%20and%20Data%20Deletion%20Request%20-%20CatWell&amp;body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20CatWell%20account%20and%20all%20associated%20cloud%20data.%0A%0AGoogle%20email%20used%20in%20CatWell%3A%20%0A%0AThank%20you.">
+            Send Deletion Request by Email
+          </a>
+        </div>
+        <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.9rem;">
+          After verifying ownership of the email address, deletion is typically completed within 7
+          business days and always <strong>within a maximum of 30 days</strong>, followed by a confirmation email.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Data Deleted &amp; Retention Summary</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Action on Deletion</th>
+                <th>Retention After Deletion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Firebase Authentication Account</strong> (UID, email, display name)</td>
+                <td>Permanently deleted.</td>
+                <td>None (0 days).</td>
+              </tr>
+              <tr>
+                <td><strong>Personal Cloud Firestore Data</strong> (cat profiles, vaccines, vet visits, care tasks, weight logs, diary notes, stories &amp; thumbnails)</td>
+                <td>Permanently deleted.</td>
+                <td>None (0 days).</td>
+              </tr>
+              <tr>
+                <td><strong>Shared Family Sync Groups</strong></td>
+                <td>Your membership is removed; if you were the sole remaining member, the family group is deleted.</td>
+                <td>Shared records in an active multi-member family group remain accessible to the remaining family members without your personal account record.</td>
+              </tr>
+              <tr>
+                <td><strong>On-Device Local Data</strong> (Room database, preferences, local photos, optional Android Keystore-encrypted personal Gemini API key)</td>
+                <td>Wiped immediately on in-app deletion or automatically removed when uninstalling the app.</td>
+                <td>None (stored exclusively in your device's private app storage).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          We do not retain hidden backups or marketing profiles after deletion. See the full
+          <a href="privacy-policy.html#en">CatWell Privacy Policy</a> for additional details.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 CatWell — Gabriele O.</span>
+    <span><a href="index.html">Support</a> · <a href="privacy-policy.html">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-lang]').forEach(function (el) {
+          el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
+        });
+        document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+          var active = btn.getAttribute('data-lang-btn') === lang;
+          btn.classList.toggle('active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        document.querySelectorAll('[data-i18n-it]').forEach(function (el) {
+          el.textContent = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-it');
+        });
+      }
+      var initial = (window.location.hash === '#en' || new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'it';
+      setLang(initial);
+      document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setLang(btn.getAttribute('data-lang-btn'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
