@@ -42,7 +42,7 @@
         <div class="meta-row">
           <span><strong>Ultimo aggiornamento:</strong> 22 Novembre 2026</span>
           <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
-          <span><strong>Titolare:</strong> Gabriele O. (<a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a>)</span>
+          <span><strong>Titolare:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
         <div class="toc">
           <a href="#it-titolare">1. Titolare</a>
@@ -63,7 +63,7 @@
         </p>
         <p>
           Per qualsiasi richiesta sulla privacy o sull'esercizio dei diritti GDPR puoi scrivere a:
-          <a href="mailto:ogabic73@gmail.com?subject=Privacy%20CatWell"><strong>ogabic73@gmail.com</strong></a>.
+          <a href="mailto:devapp.gabrielo@gmail.com?subject=Privacy%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.
         </p>
       </section>
 
@@ -212,10 +212,17 @@
           <a class="btn btn-primary" href="account-deletion.html">Vai alla pagina Eliminazione Account e Dati</a>
         </div>
 
-        <h3>Minori</h3>
+        <h3>Diritti internazionali (USA CCPA/CPRA, UK, Brasile, Svizzera, Canada)</h3>
+        <ul>
+          <li><strong>Residenti negli Stati Uniti (CCPA/CPRA California e leggi statali):</strong> CatWell <strong>non vende</strong> né <strong>condivide</strong> dati personali per pubblicità comportamentale cross-context (<em>Do Not Sell or Share My Personal Information</em>). Puoi esercitare i diritti di accesso e cancellazione senza alcuna discriminazione tramite la cancellazione in-app o scrivendo a <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</li>
+          <li><strong>Altre giurisdizioni internazionali (UK GDPR, Brasile LGPD, Svizzera nFADP, Canada PIPEDA):</strong> gli utenti residenti al di fuori dello SEE godono degli stessi diritti di trasparenza, rettifica e cancellazione completa dei propri dati personali.</li>
+        </ul>
+
+        <h3>Minori (GDPR &amp; COPPA USA)</h3>
         <p>
-          CatWell non è rivolta a minori di 13 anni (o all'età minima prevista dal proprio Paese UE per
-          il consenso digitale) e non raccoglie consapevolmente dati personali di bambini.
+          CatWell non è rivolta a minori di 13 anni (o all'età minima prevista dal proprio Paese per
+          il consenso digitale, incluso il COPPA negli Stati Uniti) e non raccoglie consapevolmente
+          dati personali di bambini.
         </p>
 
         <h3>Esportazione PDF e Condivisione Famiglia</h3>
@@ -251,7 +258,7 @@
         <div class="meta-row">
           <span><strong>Last Updated:</strong> November 22, 2026</span>
           <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
-          <span><strong>Data Controller:</strong> Gabriele O. (<a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a>)</span>
+          <span><strong>Data Controller:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
         <div class="toc">
           <a href="#en-controller">1. Controller</a>
@@ -272,7 +279,7 @@
         </p>
         <p>
           For any privacy inquiry or GDPR request, contact:
-          <a href="mailto:ogabic73@gmail.com?subject=CatWell%20Privacy"><strong>ogabic73@gmail.com</strong></a>.
+          <a href="mailto:devapp.gabrielo@gmail.com?subject=CatWell%20Privacy"><strong>devapp.gabrielo@gmail.com</strong></a>.
         </p>
       </section>
 
@@ -416,10 +423,16 @@
           <a class="btn btn-primary" href="account-deletion.html#en">Open Account &amp; Data Deletion Page</a>
         </div>
 
-        <h3>Children's Privacy</h3>
+        <h3>International Privacy Rights (US CCPA/CPRA, UK, Brazil, Switzerland, Canada)</h3>
+        <ul>
+          <li><strong>United States Residents (California CCPA/CPRA &amp; State Privacy Laws):</strong> CatWell does <strong>not sell</strong> and does <strong>not share</strong> personal information for cross-context behavioral advertising (<em>Do Not Sell or Share My Personal Information</em>). You may exercise your rights to know and delete personal data without discrimination using in-app deletion or by emailing <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</li>
+          <li><strong>Other Jurisdictions (UK GDPR, Brazil LGPD, Switzerland nFADP, Canada PIPEDA):</strong> Users worldwide may exercise equivalent rights to access, correct, or permanently delete their personal data at any time.</li>
+        </ul>
+
+        <h3>Children's Privacy (GDPR &amp; US COPPA)</h3>
         <p>
-          CatWell is not intended for children under 13 (or the minimum digital consent age in your
-          jurisdiction) and does not knowingly collect personal data from children.
+          CatWell is not directed to children under 13 (or the minimum digital consent age in your
+          jurisdiction, including US COPPA) and does not knowingly collect personal data from children.
         </p>
 
         <div class="callout">
@@ -443,7 +456,7 @@
 
   <script>
     (function () {
-      function setLang(lang) {
+      function setLang(lang, persist) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-lang]').forEach(function (el) {
           el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
@@ -456,13 +469,26 @@
         document.querySelectorAll('[data-i18n-it]').forEach(function (el) {
           el.textContent = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-it');
         });
+        if (persist) {
+          try { sessionStorage.setItem('catwell_legal_lang', lang); } catch (e) {}
+        }
       }
-      var hash = window.location.hash || '';
-      var initial = (hash === '#en' || hash.indexOf('#en-') === 0 || new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'it';
-      setLang(initial);
+      function detectInitialLang() {
+        var hash = (window.location.hash || '').toLowerCase();
+        var param = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
+        if (param === 'it' || hash === '#it' || hash.indexOf('#it-') === 0) return 'it';
+        if (param === 'en' || hash === '#en' || hash.indexOf('#en-') === 0) return 'en';
+        try {
+          var saved = sessionStorage.getItem('catwell_legal_lang');
+          if (saved === 'it' || saved === 'en') return saved;
+        } catch (e) {}
+        var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+        return browserLang.indexOf('it') === 0 ? 'it' : 'en';
+      }
+      setLang(detectInitialLang(), false);
       document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          setLang(btn.getAttribute('data-lang-btn'));
+          setLang(btn.getAttribute('data-lang-btn'), true);
         });
       });
     })();

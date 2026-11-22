@@ -45,7 +45,7 @@
         <div class="meta-row">
           <span><strong>App:</strong> CatWell</span>
           <span><strong>Package Android:</strong> <code>com.gabrielo.catwell</code></span>
-          <span><strong>Contatto supporto:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+          <span><strong>Contatto supporto:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></span>
         </div>
       </section>
 
@@ -80,7 +80,7 @@
           scrivi direttamente allo sviluppatore:
         </p>
         <ul>
-          <li><strong>Email supporto e privacy:</strong> <a href="mailto:ogabic73@gmail.com?subject=Supporto%20CatWell">ogabic73@gmail.com</a></li>
+          <li><strong>Email supporto e privacy:</strong> <a href="mailto:devapp.gabrielo@gmail.com?subject=Supporto%20CatWell">devapp.gabrielo@gmail.com</a></li>
           <li><strong>Lingue supportate nell'app:</strong> Italiano, English, Español, Français, Deutsch, Română.</li>
           <li><strong>Tempi di risposta indicativi:</strong> entro 3–5 giorni lavorativi (massimo 30 giorni per richieste formali GDPR).</li>
         </ul>
@@ -107,7 +107,7 @@
         <div class="meta-row">
           <span><strong>App:</strong> CatWell</span>
           <span><strong>Android Package:</strong> <code>com.gabrielo.catwell</code></span>
-          <span><strong>Support Email:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+          <span><strong>Support Email:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></span>
         </div>
       </section>
 
@@ -141,7 +141,7 @@
           For technical support, privacy questions, or GDPR data requests, please contact the developer:
         </p>
         <ul>
-          <li><strong>Support &amp; Privacy Email:</strong> <a href="mailto:ogabic73@gmail.com?subject=CatWell%20Support">ogabic73@gmail.com</a></li>
+          <li><strong>Support &amp; Privacy Email:</strong> <a href="mailto:devapp.gabrielo@gmail.com?subject=CatWell%20Support">devapp.gabrielo@gmail.com</a></li>
           <li><strong>Supported In-App Languages:</strong> Italian, English, Spanish, French, German, Romanian.</li>
           <li><strong>Response Time:</strong> Typically within 3–5 business days (maximum 30 days for formal GDPR requests).</li>
         </ul>
@@ -160,7 +160,7 @@
 
   <script>
     (function () {
-      function setLang(lang) {
+      function setLang(lang, persist) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-lang]').forEach(function (el) {
           el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
@@ -173,12 +173,26 @@
         document.querySelectorAll('[data-i18n-it]').forEach(function (el) {
           el.textContent = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-it');
         });
+        if (persist) {
+          try { sessionStorage.setItem('catwell_legal_lang', lang); } catch (e) {}
+        }
       }
-      var initial = (window.location.hash === '#en' || new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'it';
-      setLang(initial);
+      function detectInitialLang() {
+        var hash = (window.location.hash || '').toLowerCase();
+        var param = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
+        if (param === 'it' || hash === '#it' || hash.indexOf('#it-') === 0) return 'it';
+        if (param === 'en' || hash === '#en' || hash.indexOf('#en-') === 0) return 'en';
+        try {
+          var saved = sessionStorage.getItem('catwell_legal_lang');
+          if (saved === 'it' || saved === 'en') return saved;
+        } catch (e) {}
+        var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+        return browserLang.indexOf('it') === 0 ? 'it' : 'en';
+      }
+      setLang(detectInitialLang(), false);
       document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          setLang(btn.getAttribute('data-lang-btn'));
+          setLang(btn.getAttribute('data-lang-btn'), true);
         });
       });
     })();

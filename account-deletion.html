@@ -42,7 +42,7 @@
         <div class="meta-row">
           <span><strong>App:</strong> CatWell (<code>com.gabrielo.catwell</code>)</span>
           <span><strong>Sviluppatore:</strong> Gabriele O.</span>
-          <span><strong>Contatto:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+          <span><strong>Contatto:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></span>
         </div>
       </section>
 
@@ -70,12 +70,12 @@
           usato per accedere a CatWell:
         </p>
         <ul>
-          <li><strong>Destinatario:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></li>
+          <li><strong>Destinatario:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></li>
           <li><strong>Oggetto consigliato:</strong> <code>Richiesta eliminazione account e dati - CatWell</code></li>
           <li><strong>Contenuto:</strong> indica l'email dell'account Google associato a CatWell e se desideri eliminare l'intero account oppure solo specifici dati cloud.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn btn-danger" href="mailto:ogabic73@gmail.com?subject=Richiesta%20eliminazione%20account%20e%20dati%20-%20CatWell&amp;body=Ciao%2C%0A%0AChiedo%20l%27eliminazione%20definitiva%20del%20mio%20account%20CatWell%20e%20di%20tutti%20i%20dati%20cloud%20associati.%0A%0AEmail%20account%20Google%20usato%20in%20CatWell%3A%20%0A%0AGrazie.">
+          <a class="btn btn-danger" href="mailto:devapp.gabrielo@gmail.com?subject=Richiesta%20eliminazione%20account%20e%20dati%20-%20CatWell&amp;body=Ciao%2C%0A%0AChiedo%20l%27eliminazione%20definitiva%20del%20mio%20account%20CatWell%20e%20di%20tutti%20i%20dati%20cloud%20associati.%0A%0AEmail%20account%20Google%20usato%20in%20CatWell%3A%20%0A%0AGrazie.">
             Invia richiesta di eliminazione via Email
           </a>
         </div>
@@ -141,7 +141,7 @@
         <div class="meta-row">
           <span><strong>App:</strong> CatWell (<code>com.gabrielo.catwell</code>)</span>
           <span><strong>Developer:</strong> Gabriele O.</span>
-          <span><strong>Contact:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></span>
+          <span><strong>Contact:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></span>
         </div>
       </section>
 
@@ -168,12 +168,12 @@
           sending an email from the <strong>same Google account email address</strong> used in CatWell:
         </p>
         <ul>
-          <li><strong>Recipient:</strong> <a href="mailto:ogabic73@gmail.com">ogabic73@gmail.com</a></li>
+          <li><strong>Recipient:</strong> <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a></li>
           <li><strong>Subject:</strong> <code>Account and Data Deletion Request - CatWell</code></li>
           <li><strong>Details:</strong> Include the Google email address linked to CatWell and specify whether you want full account deletion or removal of specific cloud data.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn btn-danger" href="mailto:ogabic73@gmail.com?subject=Account%20and%20Data%20Deletion%20Request%20-%20CatWell&amp;body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20CatWell%20account%20and%20all%20associated%20cloud%20data.%0A%0AGoogle%20email%20used%20in%20CatWell%3A%20%0A%0AThank%20you.">
+          <a class="btn btn-danger" href="mailto:devapp.gabrielo@gmail.com?subject=Account%20and%20Data%20Deletion%20Request%20-%20CatWell&amp;body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20CatWell%20account%20and%20all%20associated%20cloud%20data.%0A%0AGoogle%20email%20used%20in%20CatWell%3A%20%0A%0AThank%20you.">
             Send Deletion Request by Email
           </a>
         </div>
@@ -233,7 +233,7 @@
 
   <script>
     (function () {
-      function setLang(lang) {
+      function setLang(lang, persist) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-lang]').forEach(function (el) {
           el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
@@ -246,12 +246,26 @@
         document.querySelectorAll('[data-i18n-it]').forEach(function (el) {
           el.textContent = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-it');
         });
+        if (persist) {
+          try { sessionStorage.setItem('catwell_legal_lang', lang); } catch (e) {}
+        }
       }
-      var initial = (window.location.hash === '#en' || new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'it';
-      setLang(initial);
+      function detectInitialLang() {
+        var hash = (window.location.hash || '').toLowerCase();
+        var param = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
+        if (param === 'it' || hash === '#it' || hash.indexOf('#it-') === 0) return 'it';
+        if (param === 'en' || hash === '#en' || hash.indexOf('#en-') === 0) return 'en';
+        try {
+          var saved = sessionStorage.getItem('catwell_legal_lang');
+          if (saved === 'it' || saved === 'en') return saved;
+        } catch (e) {}
+        var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+        return browserLang.indexOf('it') === 0 ? 'it' : 'en';
+      }
+      setLang(detectInitialLang(), false);
       document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          setLang(btn.getAttribute('data-lang-btn'));
+          setLang(btn.getAttribute('data-lang-btn'), true);
         });
       });
     })();
