@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — CatWell</title>
-  <meta name="description" content="GDPR and international Privacy Policy for the CatWell Android app in IT, EN, ES, FR, DE, and RO.">
+  <title>Privacy Policy — ShareATail</title>
+  <meta name="description" content="GDPR and international Privacy Policy for the ShareATail Android app (formerly CatWell) in IT, EN, ES, FR, DE, and RO.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">CW</span>
-        <span>CatWell</span>
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <span>ShareATail</span>
       </a>
       <div class="header-actions">
         <nav class="nav-links" aria-label="Main navigation">
@@ -37,14 +37,14 @@
     <div data-lang="it" id="it">
       <section class="hero">
         <span class="eyebrow">Informativa Privacy • GDPR (UE 2016/679)</span>
-        <h1>Privacy Policy di CatWell</h1>
+        <h1>Privacy Policy di ShareATail</h1>
         <p class="lead">
-          Questa informativa descrive come l'applicazione Android <strong>CatWell</strong> raccoglie,
-          utilizza, archivia e protegge i dati personali in conformità al GDPR, alle leggi internazionali
-          applicabili e alle norme di Google Play.
+          Questa informativa descrive come l'applicazione Android <strong>ShareATail</strong> (ex CatWell)
+          raccoglie, utilizza, archivia e protegge i dati personali in conformità al GDPR, alle leggi
+          internazionali applicabili e alle norme di Google Play.
         </p>
         <div class="meta-row">
-          <span><strong>Ultimo aggiornamento:</strong> 22 Novembre 2026</span>
+          <span><strong>Ultimo aggiornamento:</strong> 27 Novembre 2026</span>
           <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Titolare:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -52,22 +52,22 @@
 
       <section class="card">
         <h2>1. Titolare del trattamento e contatti</h2>
-        <p>Titolare del trattamento per l'app <strong>CatWell</strong>: sviluppatore indipendente <strong>Gabriele O.</strong> — contatto privacy: <a href="mailto:devapp.gabrielo@gmail.com?subject=Privacy%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Titolare del trattamento per l'app <strong>ShareATail</strong>: sviluppatore indipendente <strong>Gabriele O.</strong> — contatto privacy: <a href="mailto:devapp.gabrielo@gmail.com?subject=Privacy%20ShareATail"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Dati trattati e archiviazione</h2>
-        <p>CatWell è <strong>offline-first</strong>: puoi gestire il diario del tuo gatto localmente senza account. Il backup cloud con Google Sign-In è completamente opzionale.</p>
+        <p>ShareATail è <strong>offline-first</strong>: puoi gestire il diario dei tuoi gatti e cani (i tuoi Tail) localmente senza account. Il backup cloud con Google Sign-In è completamente opzionale.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Categoria</th><th>Esempi</th><th>Archiviazione</th><th>Obbligatorio?</th></tr></thead>
             <tbody>
               <tr><td><strong>Account Google</strong></td><td>UID Firebase, email, nome profilo Google.</td><td>Firebase Authentication &amp; Cloud Firestore.</td><td>No (solo se attivi backup/Famiglia).</td></tr>
-              <tr><td><strong>Profili gatti e diario</strong></td><td>Nome, razza, nascita, peso, microchip, vaccini, visite, cure, note, storie e miniature foto.</td><td>Database locale (Room) e, se accedi con Google, Cloud Firestore.</td><td>Inseriti volontariamente.</td></tr>
-              <tr><td><strong>Impostazioni e veterinario</strong></td><td>Recapito clinica veterinaria, lingua, tema, unità peso, orari notifiche.</td><td>Solo memoria privata del dispositivo.</td><td>Facoltativi.</td></tr>
-              <tr><td><strong>Foto per funzioni AI</strong></td><td>Immagini del gatto scelte per Scanner Razze AI o AI Story.</td><td>Elaborate su richiesta tramite Google Gemini (Firebase AI Logic o chiave personale).</td><td>No (solo su azione esplicita).</td></tr>
+              <tr><td><strong>Profili gatti/cani e diario</strong></td><td>Specie (gatto o cane), nome, razza, nascita, peso, microchip, vaccini, visite, cure, note, storie e miniature foto.</td><td>Database locale (Room) e, se accedi con Google, Cloud Firestore.</td><td>Inseriti volontariamente.</td></tr>
+              <tr><td><strong>Impostazioni e veterinario</strong></td><td>Recapito clinica veterinaria, lingua, tema, unità peso, orari notifiche.</td><td>Solo memoria privata del dispositivo (e Famiglia condivisa se aggiungi il contatto veterinario familiare).</td><td>Facoltativi.</td></tr>
+              <tr><td><strong>Foto per funzioni AI</strong></td><td>Immagini di gatti o cani scelte per Scanner Razze AI o AI Story.</td><td>Elaborate su richiesta tramite Google Gemini (Firebase AI Logic o chiave personale).</td><td>No (solo su azione esplicita).</td></tr>
               <tr><td><strong>Chiave API Gemini personale</strong></td><td>Eventuale chiave Google AI Studio inserita dall'utente.</td><td><strong>Solo sul dispositivo</strong>, cifrata con <strong>Android Keystore (AES-256-GCM)</strong>. Mai caricata su Firestore.</td><td>No (facoltativa).</td></tr>
-              <tr><td><strong>Integrità e sicurezza</strong></td><td>Token anti-abuso di Firebase App Check / reCAPTCHA Enterprise.</td><td>Elaborati da Google Firebase per proteggere le API.</td><td>Automatico per funzioni cloud/AI.</td></tr>
+              <tr><td><strong>Integrità e sicurezza</strong></td><td>Token anti-abuso di Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Elaborati da Google Firebase per proteggere le API.</td><td>Automatico per funzioni cloud/AI.</td></tr>
             </tbody>
           </table>
         </div>
@@ -78,7 +78,7 @@
         <h2>3. Funzioni AI e Permessi Android</h2>
         <p><strong>Scanner Razze AI</strong> e <strong>AI Story</strong> inviano le immagini scelte (dopo pre-filtro locale con Google ML Kit) a <strong>Google Gemini</strong> via Firebase AI Logic o chiave personale dell'utente. Gli output sono informativi/creativi e non medici.</p>
         <ul>
-          <li><code>CAMERA</code> (opzionale, runtime): scatto foto del gatto.</li>
+          <li><code>CAMERA</code> (opzionale, runtime): scatto foto del tuo gatto o cane.</li>
           <li><code>POST_NOTIFICATIONS</code> (opzionale, Android 13+): notifiche vaccini, visite e cure.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code>: consegna puntuale di promemoria sanitari programmati (con fallback automatico).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code>: ripristino promemoria al riavvio, vibrazione e accesso cloud/AI.</li>
@@ -88,7 +88,7 @@
 
       <section class="card">
         <h2>4. Fornitori terzi e Sicurezza</h2>
-        <p>CatWell si avvale esclusivamente di <strong>Google LLC / Firebase</strong> (Firebase Authentication, Cloud Firestore, Firebase AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) come responsabili del trattamento (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). Trasferimenti extra-UE protetti da Clausole Contrattuali Standard (SCC).</p>
+        <p>ShareATail si avvale esclusivamente di <strong>Google LLC / Firebase</strong> (Firebase Authentication, Cloud Firestore, Firebase AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) come responsabili del trattamento (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). Trasferimenti extra-UE protetti da Clausole Contrattuali Standard (SCC).</p>
         <ul>
           <li>Traffico esclusivamente <strong>HTTPS/TLS</strong> (cleartext disabilitato).</li>
           <li>Backup automatico non cifrato Android disabilitato (<code>allowBackup=false</code>); chiave API personale cifrata in Android Keystore.</li>
@@ -102,12 +102,12 @@
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#it">Pagina Eliminazione Account e Dati</a></div>
         <h3>Diritti internazionali (USA CCPA/CPRA, UK, Brasile, Svizzera, Canada)</h3>
         <ul>
-          <li><strong>USA (CCPA/CPRA California e leggi statali):</strong> CatWell <strong>non vende</strong> né <strong>condivide</strong> dati personali per pubblicità comportamentale (<em>Do Not Sell or Share</em>). Diritti di accesso e cancellazione garantiti senza discriminazioni.</li>
+          <li><strong>USA (CCPA/CPRA California e leggi statali):</strong> ShareATail <strong>non vende</strong> né <strong>condivide</strong> dati personali per pubblicità comportamentale (<em>Do Not Sell or Share</em>). Diritti di accesso e cancellazione garantiti senza discriminazioni.</li>
           <li><strong>UK GDPR, Brasile LGPD, Svizzera nFADP, Canada PIPEDA:</strong> diritti equivalenti esercitabili in-app o scrivendo a <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</li>
         </ul>
         <h3>Minori (GDPR &amp; COPPA USA)</h3>
-        <p>CatWell non è rivolta a minori di 13 anni e non raccoglie consapevolmente dati di bambini.</p>
-        <div class="callout"><strong>Disclaimer veterinario:</strong> tutte le informazioni su razze, nutrizione, comportamenti e risultati AI hanno scopo esclusivamente informativo e non sostituiscono il medico veterinario.</div>
+        <p>ShareATail non è rivolta a minori di 13 anni e non raccoglie consapevolmente dati di bambini.</p>
+        <div class="callout"><strong>Disclaimer veterinario:</strong> tutte le informazioni su razze feline e canine, nutrizione, comportamenti e risultati AI hanno scopo esclusivamente informativo e non sostituiscono il medico veterinario.</div>
       </section>
     </div>
 
@@ -115,14 +115,14 @@
     <div data-lang="en" id="en" class="lang-hidden">
       <section class="hero">
         <span class="eyebrow">Privacy Notice • GDPR &amp; International</span>
-        <h1>CatWell Privacy Policy</h1>
+        <h1>ShareATail Privacy Policy</h1>
         <p class="lead">
-          This Privacy Policy explains how the <strong>CatWell</strong> Android app collects, uses,
-          stores, and protects personal data in compliance with GDPR, international privacy laws, and
-          Google Play policies.
+          This Privacy Policy explains how the <strong>ShareATail</strong> (formerly CatWell) Android
+          app collects, uses, stores, and protects personal data in compliance with GDPR, international
+          privacy laws, and Google Play policies.
         </p>
         <div class="meta-row">
-          <span><strong>Last Updated:</strong> November 22, 2026</span>
+          <span><strong>Last Updated:</strong> November 27, 2026</span>
           <span><strong>Package:</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Controller:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -130,22 +130,22 @@
 
       <section class="card">
         <h2>1. Data Controller &amp; Contact</h2>
-        <p>Data Controller for <strong>CatWell</strong>: independent developer <strong>Gabriele O.</strong> — privacy contact: <a href="mailto:devapp.gabrielo@gmail.com?subject=CatWell%20Privacy"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Data Controller for <strong>ShareATail</strong>: independent developer <strong>Gabriele O.</strong> — privacy contact: <a href="mailto:devapp.gabrielo@gmail.com?subject=ShareATail%20Privacy"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Data Processed &amp; Storage</h2>
-        <p>CatWell is <strong>offline-first</strong>: you can use the local cat health diary without signing in. Google Sign-In cloud backup is completely optional.</p>
+        <p>ShareATail is <strong>offline-first</strong>: you can use the local cat and dog health diary (your Tails) without signing in. Google Sign-In cloud backup is completely optional.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Category</th><th>Examples</th><th>Storage</th><th>Required?</th></tr></thead>
             <tbody>
               <tr><td><strong>Google Account</strong></td><td>Firebase UID, email address, Google display name.</td><td>Firebase Authentication &amp; Cloud Firestore.</td><td>No (only for Cloud Backup / Family Sync).</td></tr>
-              <tr><td><strong>Cat Profiles &amp; Diary</strong></td><td>Name, breed, birth date, weight, microchip, vaccines, vet visits, care, notes, stories, photo thumbnails.</td><td>Local device database (Room) and, if signed in, Cloud Firestore.</td><td>User-entered voluntarily.</td></tr>
-              <tr><td><strong>Vet Contact &amp; Settings</strong></td><td>Saved vet clinic info, app language, theme, weight unit, reminder times.</td><td>Private on-device storage only.</td><td>Optional.</td></tr>
-              <tr><td><strong>AI Feature Photos</strong></td><td>Cat photos chosen by you for AI Breed Scanner or AI Story.</td><td>Processed on demand by Google Gemini (Firebase AI Logic or personal API key).</td><td>No (user-triggered only).</td></tr>
+              <tr><td><strong>Cat &amp; Dog Profiles &amp; Diary</strong></td><td>Species (cat or dog), name, breed, birth date, weight, microchip, vaccines, vet visits, care, notes, stories, photo thumbnails.</td><td>Local device database (Room) and, if signed in, Cloud Firestore.</td><td>User-entered voluntarily.</td></tr>
+              <tr><td><strong>Vet Contact &amp; Settings</strong></td><td>Saved vet clinic info, app language, theme, weight unit, reminder times.</td><td>Private on-device storage (and shared Family group if you add a shared vet contact).</td><td>Optional.</td></tr>
+              <tr><td><strong>AI Feature Photos</strong></td><td>Cat or dog photos chosen by you for AI Breed Scanner or AI Story.</td><td>Processed on demand by Google Gemini (Firebase AI Logic or personal API key).</td><td>No (user-triggered only).</td></tr>
               <tr><td><strong>Personal Gemini API Key</strong></td><td>Optional Google AI Studio key entered in Settings.</td><td><strong>Device-only</strong>, encrypted with <strong>Android Keystore (AES-256-GCM)</strong>. Never uploaded to Firestore.</td><td>No (optional).</td></tr>
-              <tr><td><strong>App Integrity &amp; Security</strong></td><td>Anti-abuse attestation tokens via Firebase App Check / reCAPTCHA Enterprise.</td><td>Processed by Google Firebase to protect cloud/AI endpoints.</td><td>Automatic for Firebase cloud/AI calls.</td></tr>
+              <tr><td><strong>App Integrity &amp; Security</strong></td><td>Anti-abuse attestation tokens via Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Processed by Google Firebase to protect cloud/AI endpoints.</td><td>Automatic for Firebase cloud/AI calls.</td></tr>
             </tbody>
           </table>
         </div>
@@ -156,7 +156,7 @@
         <h2>3. AI Processing &amp; Android Permissions</h2>
         <p><strong>AI Breed Scanner</strong> and <strong>AI Story</strong> send user-selected photos (after on-device Google ML Kit pre-filtering) to <strong>Google Gemini</strong> via Firebase AI Logic or your optional personal API key. AI outputs are informational/creative only.</p>
         <ul>
-          <li><code>CAMERA</code> (optional, runtime): capture cat photos.</li>
+          <li><code>CAMERA</code> (optional, runtime): capture photos of your cat or dog.</li>
           <li><code>POST_NOTIFICATIONS</code> (optional, Android 13+): vaccination, vet visit, and care reminders.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code>: timely delivery of scheduled pet care reminders (with automatic fallback).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code>: restore reminders after reboot, vibration, and cloud/AI access.</li>
@@ -166,7 +166,7 @@
 
       <section class="card">
         <h2>4. Third-Party Processors &amp; Security</h2>
-        <p>CatWell relies exclusively on <strong>Google LLC / Firebase</strong> (Firebase Authentication, Cloud Firestore, Firebase AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) as processors (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). International transfers use GDPR Standard Contractual Clauses (SCCs).</p>
+        <p>ShareATail relies exclusively on <strong>Google LLC / Firebase</strong> (Firebase Authentication, Cloud Firestore, Firebase AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) as processors (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). International transfers use GDPR Standard Contractual Clauses (SCCs).</p>
         <ul>
           <li>Strict <strong>HTTPS/TLS</strong> encryption in transit (cleartext HTTP blocked).</li>
           <li>Unencrypted Android auto-backup disabled (<code>allowBackup=false</code>); personal API key encrypted with Android Keystore.</li>
@@ -180,12 +180,12 @@
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#en">Open Account &amp; Data Deletion Page</a></div>
         <h3>International Privacy Rights (US CCPA/CPRA, UK, Brazil, Switzerland, Canada)</h3>
         <ul>
-          <li><strong>United States (California CCPA/CPRA &amp; State Laws):</strong> CatWell does <strong>not sell</strong> and does <strong>not share</strong> personal information for cross-context behavioral advertising (<em>Do Not Sell or Share</em>). You may exercise access and deletion rights without discrimination.</li>
+          <li><strong>United States (California CCPA/CPRA &amp; State Laws):</strong> ShareATail does <strong>not sell</strong> and does <strong>not share</strong> personal information for cross-context behavioral advertising (<em>Do Not Sell or Share</em>). You may exercise access and deletion rights without discrimination.</li>
           <li><strong>UK GDPR, Brazil LGPD, Switzerland nFADP, Canada PIPEDA:</strong> equivalent rights available in-app or by emailing <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</li>
         </ul>
         <h3>Children's Privacy (GDPR &amp; US COPPA)</h3>
-        <p>CatWell is not directed to children under 13 and does not knowingly collect children's personal data.</p>
-        <div class="callout"><strong>Veterinary Disclaimer:</strong> All breed, nutrition, behavior, and AI outputs in CatWell are informational only and never replace licensed veterinary care.</div>
+        <p>ShareATail is not directed to children under 13 and does not knowingly collect children's personal data.</p>
+        <div class="callout"><strong>Veterinary Disclaimer:</strong> All cat and dog breed, nutrition, behavior, and AI outputs in ShareATail are informational only and never replace licensed veterinary care.</div>
       </section>
     </div>
 
@@ -193,14 +193,14 @@
     <div data-lang="es" id="es" class="lang-hidden">
       <section class="hero">
         <span class="eyebrow">Política de Privacidad • RGPD e Internacional</span>
-        <h1>Política de Privacidad de CatWell</h1>
+        <h1>Política de Privacidad de ShareATail</h1>
         <p class="lead">
-          Esta política explica cómo la aplicación Android <strong>CatWell</strong> recopila, utiliza,
-          almacena y protege tus datos personales conforme al RGPD, las leyes internacionales y las
-          políticas de Google Play.
+          Esta política explica cómo la aplicación Android <strong>ShareATail</strong> (antes CatWell)
+          recopila, utiliza, almacena y protege tus datos personales conforme al RGPD, las leyes
+          internacionales y las políticas de Google Play.
         </p>
         <div class="meta-row">
-          <span><strong>Última actualización:</strong> 22 de noviembre de 2026</span>
+          <span><strong>Última actualización:</strong> 27 de noviembre de 2026</span>
           <span><strong>Paquete:</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Responsable:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -208,22 +208,22 @@
 
       <section class="card">
         <h2>1. Responsable del tratamiento y contacto</h2>
-        <p>Responsable del tratamiento de <strong>CatWell</strong>: desarrollador independiente <strong>Gabriele O.</strong> — correo de privacidad: <a href="mailto:devapp.gabrielo@gmail.com?subject=Privacidad%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Responsable del tratamiento de <strong>ShareATail</strong>: desarrollador independiente <strong>Gabriele O.</strong> — correo de privacidad: <a href="mailto:devapp.gabrielo@gmail.com?subject=Privacidad%20ShareATail"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Datos tratados y almacenamiento</h2>
-        <p>CatWell funciona primero <strong>sin conexión (offline-first)</strong>: puedes usar el diario local sin cuenta. El inicio de sesión con Google y la copia en la nube son totalmente opcionales.</p>
+        <p>ShareATail funciona primero <strong>sin conexión (offline-first)</strong>: puedes usar el diario local para tus gatos y perros (tus Tails) sin cuenta. El inicio de sesión con Google y la copia en la nube son totalmente opcionales.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Categoría</th><th>Ejemplos</th><th>Almacenamiento</th><th>¿Obligatorio?</th></tr></thead>
             <tbody>
               <tr><td><strong>Cuenta de Google</strong></td><td>UID de Firebase, correo electrónico, nombre visible.</td><td>Firebase Authentication y Cloud Firestore.</td><td>No (solo para copia cloud / Familia).</td></tr>
-              <tr><td><strong>Perfiles y diario felino</strong></td><td>Nombre, raza, fecha de nacimiento, peso, microchip, vacunas, visitas, cuidados, notas, historias y miniaturas.</td><td>Base local (Room) y, si inicias sesión, Cloud Firestore.</td><td>Introducidos voluntariamente.</td></tr>
-              <tr><td><strong>Veterinario y ajustes</strong></td><td>Teléfono/clínica veterinaria, idioma, tema, unidad de peso, horarios de avisos.</td><td>Solo en el almacenamiento privado del dispositivo.</td><td>Opcional.</td></tr>
-              <tr><td><strong>Fotos para funciones IA</strong></td><td>Imágenes elegidas para Escáner de Razas IA o AI Story.</td><td>Procesadas bajo demanda por Google Gemini (Firebase AI Logic o clave personal).</td><td>No (solo a petición explícita).</td></tr>
+              <tr><td><strong>Perfiles de gatos/perros y diario</strong></td><td>Especie (gato o perro), nombre, raza, fecha de nacimiento, peso, microchip, vacunas, visitas, cuidados, notas, historias y miniaturas.</td><td>Base local (Room) y, si inicias sesión, Cloud Firestore.</td><td>Introducidos voluntariamente.</td></tr>
+              <tr><td><strong>Veterinario y ajustes</strong></td><td>Teléfono/clínica veterinaria, idioma, tema, unidad de peso, horarios de avisos.</td><td>Almacenamiento privado del dispositivo (y grupo Familiar si añades un veterinario compartido).</td><td>Opcional.</td></tr>
+              <tr><td><strong>Fotos para funciones IA</strong></td><td>Imágenes de gatos o perros elegidas para Escáner de Razas IA o AI Story.</td><td>Procesadas bajo demanda por Google Gemini (Firebase AI Logic o clave personal).</td><td>No (solo a petición explícita).</td></tr>
               <tr><td><strong>Clave API Gemini personal</strong></td><td>Clave opcional de Google AI Studio introducida en Ajustes.</td><td><strong>Solo local</strong>, cifrada con <strong>Android Keystore (AES-256-GCM)</strong>. Nunca se sube a Firestore.</td><td>No (opcional).</td></tr>
-              <tr><td><strong>Seguridad e integridad</strong></td><td>Tokens antiabuso de Firebase App Check / reCAPTCHA Enterprise.</td><td>Procesados por Google Firebase para proteger los servicios.</td><td>Automático al usar funciones Firebase.</td></tr>
+              <tr><td><strong>Seguridad e integridad</strong></td><td>Tokens antiabuso de Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Procesados por Google Firebase para proteger los servicios.</td><td>Automático al usar funciones Firebase.</td></tr>
             </tbody>
           </table>
         </div>
@@ -234,7 +234,7 @@
         <h2>3. Funciones de IA y Permisos de Android</h2>
         <p>El <strong>Escáner de Razas IA</strong> y <strong>AI Story</strong> envían las fotos elegidas (tras un prefiltro local con Google ML Kit) a <strong>Google Gemini</strong> mediante Firebase AI Logic o tu clave personal opcional. Los resultados son solo informativos y creativos.</p>
         <ul>
-          <li><code>CAMERA</code> (opcional): tomar fotos de tu gato.</li>
+          <li><code>CAMERA</code> (opcional): tomar fotos de tu gato o perro.</li>
           <li><code>POST_NOTIFICATIONS</code> (opcional, Android 13+): recordatorios de vacunas, citas y cuidados.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code>: entrega puntual de recordatorios sanitarios programados (con alternativa automática).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code>: restaurar avisos tras reiniciar, vibración y sincronización/IA.</li>
@@ -244,7 +244,7 @@
 
       <section class="card">
         <h2>4. Proveedores externos y Seguridad</h2>
-        <p>CatWell utiliza únicamente servicios de <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) como encargados del tratamiento (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), con Cláusulas Contractuales Tipo (SCC) para transferencias internacionales.</p>
+        <p>ShareATail utiliza únicamente servicios de <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) como encargados del tratamiento (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), con Cláusulas Contractuales Tipo (SCC) para transferencias internacionales.</p>
         <ul>
           <li>Tráfico 100% <strong>HTTPS/TLS</strong> (HTTP sin cifrar bloqueado).</li>
           <li>Copia automática sin cifrar desactivada (<code>allowBackup=false</code>) y clave personal cifrada en Android Keystore.</li>
@@ -257,10 +257,10 @@
         <p>Conforme al RGPD (arts. 15–22), puedes acceder, rectificar, suprimir o limitar tus datos y reclamar ante tu autoridad de control. Elimina tu cuenta y datos al instante en <em>Ajustes → Privacidad y datos → Eliminar cuenta y todos los datos</em> o en nuestra página web:</p>
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#es">Página de Eliminación de Cuenta y Datos</a></div>
         <h3>Derechos internacionales (EE. UU. CCPA/CPRA, Reino Unido, Brasil, Suiza, Canadá)</h3>
-        <p>CatWell <strong>no vende</strong> ni <strong>comparte</strong> datos personales para publicidad dirigida (<em>Do Not Sell or Share</em>). Los residentes de EE. UU. (CCPA/CPRA), Reino Unido (UK GDPR), Brasil (LGPD), Suiza (nFADP) y Canadá (PIPEDA) disfrutan de los mismos derechos de acceso y eliminación sin discriminación escribiendo a <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
+        <p>ShareATail <strong>no vende</strong> ni <strong>comparte</strong> datos personales para publicidad dirigida (<em>Do Not Sell or Share</em>). Los residentes de EE. UU. (CCPA/CPRA), Reino Unido (UK GDPR), Brasil (LGPD), Suiza (nFADP) y Canadá (PIPEDA) disfrutan de los mismos derechos de acceso y eliminación sin discriminación escribiendo a <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
         <h3>Menores (RGPD y COPPA)</h3>
-        <p>CatWell no está dirigida a menores de 13 años y no recopila conscientemente datos de niños.</p>
-        <div class="callout"><strong>Aviso veterinario:</strong> la información sobre razas, nutrición, comportamientos y resultados de IA es meramente informativa y nunca sustituye a un veterinario.</div>
+        <p>ShareATail no está dirigida a menores de 13 años y no recopila conscientemente datos de niños.</p>
+        <div class="callout"><strong>Aviso veterinario:</strong> la información sobre razas de gatos y perros, nutrición, comportamientos y resultados de IA es meramente informativa y nunca sustituye a un veterinario.</div>
       </section>
     </div>
 
@@ -268,14 +268,14 @@
     <div data-lang="fr" id="fr" class="lang-hidden">
       <section class="hero">
         <span class="eyebrow">Politique de Confidentialité • RGPD &amp; International</span>
-        <h1>Politique de Confidentialité de CatWell</h1>
+        <h1>Politique de Confidentialité de ShareATail</h1>
         <p class="lead">
-          Cette politique explique comment l'application Android <strong>CatWell</strong> collecte,
-          utilise, conserve et protège vos données personnelles conformément au RGPD, aux lois
-          internationales et aux règles de Google Play.
+          Cette politique explique comment l'application Android <strong>ShareATail</strong> (anciennement
+          CatWell) collecte, utilise, conserve et protège vos données personnelles conformément au RGPD,
+          aux lois internationales et aux règles de Google Play.
         </p>
         <div class="meta-row">
-          <span><strong>Dernière mise à jour :</strong> 22 novembre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 27 novembre 2026</span>
           <span><strong>Package :</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Responsable :</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -283,22 +283,22 @@
 
       <section class="card">
         <h2>1. Responsable du traitement et contact</h2>
-        <p>Responsable du traitement pour <strong>CatWell</strong> : développeur indépendant <strong>Gabriele O.</strong> — contact confidentialité : <a href="mailto:devapp.gabrielo@gmail.com?subject=Confidentialite%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Responsable du traitement pour <strong>ShareATail</strong> : développeur indépendant <strong>Gabriele O.</strong> — contact confidentialité : <a href="mailto:devapp.gabrielo@gmail.com?subject=Confidentialite%20ShareATail"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Données traitées et stockage</h2>
-        <p>CatWell fonctionne d'abord <strong>hors ligne (offline-first)</strong> : vous pouvez tenir le carnet de santé local sans compte. La connexion Google et la sauvegarde cloud sont entièrement facultatives.</p>
+        <p>ShareATail fonctionne d'abord <strong>hors ligne (offline-first)</strong> : vous pouvez tenir le carnet de santé local de vos chats et chiens (vos Tails) sans compte. La connexion Google et la sauvegarde cloud sont entièrement facultatives.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Catégorie</th><th>Exemples</th><th>Stockage</th><th>Obligatoire ?</th></tr></thead>
             <tbody>
               <tr><td><strong>Compte Google</strong></td><td>UID Firebase, adresse e-mail, nom affiché.</td><td>Firebase Authentication &amp; Cloud Firestore.</td><td>Non (uniquement pour cloud / Famille).</td></tr>
-              <tr><td><strong>Profils et carnet félin</strong></td><td>Nom, race, naissance, poids, puce, vaccins, visites, soins, notes, histoires et vignettes photo.</td><td>Base locale (Room) et, si connecté, Cloud Firestore.</td><td>Saisis volontairement.</td></tr>
-              <tr><td><strong>Vétérinaire et réglages</strong></td><td>Coordonnées de la clinique, langue, thème, unité de poids, rappels.</td><td>Stockage privé de l'appareil uniquement.</td><td>Facultatif.</td></tr>
-              <tr><td><strong>Photos pour l'IA</strong></td><td>Photos de chat sélectionnées pour le Scanner de Races IA ou AI Story.</td><td>Traitées à la demande par Google Gemini (Firebase AI Logic ou clé personnelle).</td><td>Non (sur action explicite).</td></tr>
+              <tr><td><strong>Profils chats/chiens et carnet</strong></td><td>Espèce (chat ou chien), nom, race, naissance, poids, puce, vaccins, visites, soins, notes, histoires et vignettes photo.</td><td>Base locale (Room) et, si connecté, Cloud Firestore.</td><td>Saisis volontairement.</td></tr>
+              <tr><td><strong>Vétérinaire et réglages</strong></td><td>Coordonnées de la clinique, langue, thème, unité de poids, rappels.</td><td>Stockage privé de l'appareil (et groupe Famille si partagé).</td><td>Facultatif.</td></tr>
+              <tr><td><strong>Photos pour l'IA</strong></td><td>Photos de chats ou chiens sélectionnées pour le Scanner de Races IA ou AI Story.</td><td>Traitées à la demande par Google Gemini (Firebase AI Logic ou clé personnelle).</td><td>Non (sur action explicite).</td></tr>
               <tr><td><strong>Clé API Gemini personnelle</strong></td><td>Clé Google AI Studio facultative saisie dans les Paramètres.</td><td><strong>Uniquement locale</strong>, chiffrée via <strong>Android Keystore (AES-256-GCM)</strong>. Jamais envoyée sur Firestore.</td><td>Non (facultative).</td></tr>
-              <tr><td><strong>Sécurité et intégrité</strong></td><td>Jetons anti-abus Firebase App Check / reCAPTCHA Enterprise.</td><td>Traités par Google Firebase pour sécuriser les services.</td><td>Automatique pour les appels Firebase.</td></tr>
+              <tr><td><strong>Sécurité et intégrité</strong></td><td>Jetons anti-abus Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Traités par Google Firebase pour sécuriser les services.</td><td>Automatique pour les appels Firebase.</td></tr>
             </tbody>
           </table>
         </div>
@@ -309,7 +309,7 @@
         <h2>3. Traitement IA et Autorisations Android</h2>
         <p>Le <strong>Scanner de Races IA</strong> et <strong>AI Story</strong> transmettent les images choisies (après pré-filtrage local Google ML Kit) à <strong>Google Gemini</strong> via Firebase AI Logic ou votre clé personnelle facultative. Les résultats sont purement informatifs et créatifs.</p>
         <ul>
-          <li><code>CAMERA</code> (facultative) : prendre des photos de votre chat.</li>
+          <li><code>CAMERA</code> (facultative) : prendre des photos de votre chat ou chien.</li>
           <li><code>POST_NOTIFICATIONS</code> (facultative, Android 13+) : rappels de vaccins, rendez-vous et soins.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code> : envoi ponctuel des rappels de santé programmés (avec solution de repli automatique).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code> : restauration des rappels après redémarrage, vibration et accès cloud/IA.</li>
@@ -319,7 +319,7 @@
 
       <section class="card">
         <h2>4. Sous-traitants et Sécurité</h2>
-        <p>CatWell utilise uniquement <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) en tant que sous-traitant (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), avec Clauses Contractuelles Types (CCT) pour les transferts hors EEE.</p>
+        <p>ShareATail utilise uniquement <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) en tant que sous-traitant (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), avec Clauses Contractuelles Types (CCT) pour les transferts hors EEE.</p>
         <ul>
           <li>Communications strictement en <strong>HTTPS/TLS</strong> (HTTP en clair bloqué).</li>
           <li>Sauvegarde automatique non chiffrée désactivée (<code>allowBackup=false</code>) ; clé API personnelle chiffrée via Android Keystore.</li>
@@ -332,10 +332,10 @@
         <p>Conformément au RGPD (art. 15–22), vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de réclamation auprès de la CNIL ou de votre autorité locale. Supprimez compte et données dans <em>Paramètres → Confidentialité et données → Supprimer le compte et toutes les données</em> ou via notre page dédiée :</p>
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#fr">Page de Suppression du Compte</a></div>
         <h3>Droits internationaux (États-Unis CCPA/CPRA, Royaume-Uni, Brésil, Suisse, Canada)</h3>
-        <p>CatWell <strong>ne vend pas</strong> et <strong>ne partage pas</strong> de données personnelles pour la publicité ciblée (<em>Do Not Sell or Share</em>). Les utilisateurs aux États-Unis (CCPA/CPRA), Royaume-Uni (UK GDPR), Brésil (LGPD), Suisse (nLPD) et Canada (LPRPDE) bénéficient de droits équivalents sans discrimination via <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
+        <p>ShareATail <strong>ne vend pas</strong> et <strong>ne partage pas</strong> de données personnelles pour la publicité ciblée (<em>Do Not Sell or Share</em>). Les utilisateurs aux États-Unis (CCPA/CPRA), Royaume-Uni (UK GDPR), Brésil (LGPD), Suisse (nLPD) et Canada (LPRPDE) bénéficient de droits équivalents sans discrimination via <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
         <h3>Mineurs (RGPD &amp; COPPA)</h3>
-        <p>CatWell ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
-        <div class="callout"><strong>Avertissement vétérinaire :</strong> les informations sur les races, la nutrition, les comportements et les résultats IA sont fournies à titre informatif uniquement et ne remplacent jamais un vétérinaire.</div>
+        <p>ShareATail ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
+        <div class="callout"><strong>Avertissement vétérinaire :</strong> les informations sur les races félines et canines, la nutrition, les comportements et les résultats IA sont fournies à titre informatif uniquement et ne remplacent jamais un vétérinaire.</div>
       </section>
     </div>
 
@@ -343,14 +343,14 @@
     <div data-lang="de" id="de" class="lang-hidden">
       <section class="hero">
         <span class="eyebrow">Datenschutzerklärung • DSGVO &amp; International</span>
-        <h1>Datenschutzerklärung für CatWell</h1>
+        <h1>Datenschutzerklärung für ShareATail</h1>
         <p class="lead">
-          Diese Datenschutzerklärung erläutert, wie die Android-App <strong>CatWell</strong> personenbezogene
-          Daten gemäß DSGVO, internationalen Datenschutzgesetzen und Google-Play-Richtlinien verarbeitet
-          und schützt.
+          Diese Datenschutzerklärung erläutert, wie die Android-App <strong>ShareATail</strong> (ehemals
+          CatWell) personenbezogene Daten gemäß DSGVO, internationalen Datenschutzgesetzen und
+          Google-Play-Richtlinien verarbeitet und schützt.
         </p>
         <div class="meta-row">
-          <span><strong>Stand:</strong> 22. November 2026</span>
+          <span><strong>Stand:</strong> 27. November 2026</span>
           <span><strong>Paket:</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Verantwortlicher:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -358,22 +358,22 @@
 
       <section class="card">
         <h2>1. Verantwortlicher und Kontakt</h2>
-        <p>Verantwortlicher für <strong>CatWell</strong>: unabhängiger Entwickler <strong>Gabriele O.</strong> — Datenschutzkontakt: <a href="mailto:devapp.gabrielo@gmail.com?subject=Datenschutz%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Verantwortlicher für <strong>ShareATail</strong>: unabhängiger Entwickler <strong>Gabriele O.</strong> — Datenschutzkontakt: <a href="mailto:devapp.gabrielo@gmail.com?subject=Datenschutz%20ShareATail"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Verarbeitete Daten und Speicherung</h2>
-        <p>CatWell arbeitet <strong>offline-first</strong>: Das lokale Gesundheitstagebuch funktioniert ohne Konto. Google Sign-In und Cloud-Backup sind vollständig optional.</p>
+        <p>ShareATail arbeitet <strong>offline-first</strong>: Das lokale Gesundheitstagebuch für deine Katzen und Hunde (deine Tails) funktioniert ohne Konto. Google Sign-In und Cloud-Backup sind vollständig optional.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Kategorie</th><th>Beispiele</th><th>Speicherort</th><th>Erforderlich?</th></tr></thead>
             <tbody>
               <tr><td><strong>Google-Konto</strong></td><td>Firebase-UID, E-Mail-Adresse, Anzeigename.</td><td>Firebase Authentication &amp; Cloud Firestore.</td><td>Nein (nur für Cloud-Backup / Familie).</td></tr>
-              <tr><td><strong>Katzenprofile &amp; Tagebuch</strong></td><td>Name, Rasse, Geburtsdatum, Gewicht, Mikrochip, Impfungen, Besuche, Pflege, Notizen, Geschichten, Vorschaubilder.</td><td>Lokale Datenbank (Room) und bei Anmeldung Cloud Firestore.</td><td>Freiwillige Eingabe.</td></tr>
-              <tr><td><strong>Tierarzt &amp; Einstellungen</strong></td><td>Tierarztkontakt, App-Sprache, Design, Gewichtseinheit, Erinnerungszeiten.</td><td>Nur im privaten Gerätespeicher.</td><td>Optional.</td></tr>
-              <tr><td><strong>Fotos für KI-Funktionen</strong></td><td>Vom Nutzer gewählte Katzenfotos für KI-Rassenscanner oder AI Story.</td><td>Bedarfsweise Verarbeitung über Google Gemini (Firebase AI Logic oder eigener Schlüssel).</td><td>Nein (nur auf Nutzeraktion).</td></tr>
+              <tr><td><strong>Katzen- &amp; Hundeprofile / Tagebuch</strong></td><td>Tierart (Katze oder Hund), Name, Rasse, Geburtsdatum, Gewicht, Mikrochip, Impfungen, Besuche, Pflege, Notizen, Geschichten, Vorschaubilder.</td><td>Lokale Datenbank (Room) und bei Anmeldung Cloud Firestore.</td><td>Freiwillige Eingabe.</td></tr>
+              <tr><td><strong>Tierarzt &amp; Einstellungen</strong></td><td>Tierarztkontakt, App-Sprache, Design, Gewichtseinheit, Erinnerungszeiten.</td><td>Privater Gerätespeicher (und Familiengruppe, sofern geteilt).</td><td>Optional.</td></tr>
+              <tr><td><strong>Fotos für KI-Funktionen</strong></td><td>Vom Nutzer gewählte Katzen- oder Hundefotos für KI-Rassenscanner oder AI Story.</td><td>Bedarfsweise Verarbeitung über Google Gemini (Firebase AI Logic oder eigener Schlüssel).</td><td>Nein (nur auf Nutzeraktion).</td></tr>
               <tr><td><strong>Eigener Gemini-API-Schlüssel</strong></td><td>Optionaler Google-AI-Studio-Schlüssel in den Einstellungen.</td><td><strong>Nur lokal</strong>, verschlüsselt mit <strong>Android Keystore (AES-256-GCM)</strong>. Nie in Firestore gespeichert.</td><td>Nein (optional).</td></tr>
-              <tr><td><strong>Sicherheit &amp; Integrität</strong></td><td>Missbrauchsschutz-Tokens via Firebase App Check / reCAPTCHA Enterprise.</td><td>Verarbeitet durch Google Firebase zum Schutz der APIs.</td><td>Automatisch bei Firebase-Nutzung.</td></tr>
+              <tr><td><strong>Sicherheit &amp; Integrität</strong></td><td>Missbrauchsschutz-Tokens via Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Verarbeitet durch Google Firebase zum Schutz der APIs.</td><td>Automatisch bei Firebase-Nutzung.</td></tr>
             </tbody>
           </table>
         </div>
@@ -384,7 +384,7 @@
         <h2>3. KI-Verarbeitung und Android-Berechtigungen</h2>
         <p><strong>KI-Rassenscanner</strong> und <strong>AI Story</strong> senden ausgewählte Fotos (nach lokaler Vorprüfung via Google ML Kit) an <strong>Google Gemini</strong> über Firebase AI Logic oder deinen optionalen eigenen API-Schlüssel. Ergebnisse dienen ausschließlich Informations- und Unterhaltungszwecken.</p>
         <ul>
-          <li><code>CAMERA</code> (optional): Fotos der Katze aufnehmen.</li>
+          <li><code>CAMERA</code> (optional): Fotos von Katze oder Hund aufnehmen.</li>
           <li><code>POST_NOTIFICATIONS</code> (optional, Android 13+): Impf-, Termin- und Pflegeerinnerungen.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code>: pünktliche Zustellung geplanter Gesundheitserinnerungen (mit automatischem Fallback).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code>: Wiederherstellung nach Neustart, Vibration und Cloud-/KI-Zugriff.</li>
@@ -394,7 +394,7 @@
 
       <section class="card">
         <h2>4. Auftragsverarbeiter und Sicherheit</h2>
-        <p>CatWell nutzt ausschließlich Dienste von <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) als Auftragsverarbeiter (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). Internationale Übermittlungen erfolgen auf Basis von EU-Standardvertragsklauseln (SCC).</p>
+        <p>ShareATail nutzt ausschließlich Dienste von <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) als Auftragsverarbeiter (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>). Internationale Übermittlungen erfolgen auf Basis von EU-Standardvertragsklauseln (SCC).</p>
         <ul>
           <li>Ausschließlich <strong>HTTPS/TLS</strong>-Übertragung (Klartext-HTTP blockiert).</li>
           <li>Unverschlüsseltes Android-Auto-Backup deaktiviert (<code>allowBackup=false</code>); eigener API-Schlüssel per Android Keystore verschlüsselt.</li>
@@ -407,10 +407,10 @@
         <p>Gemäß DSGVO (Art. 15–22) hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch sowie Beschwerde bei einer Aufsichtsbehörde. Lösche Konto und Daten jederzeit unter <em>Einstellungen → Datenschutz &amp; Daten → Konto und alle Daten löschen</em> oder über unsere Löschseite:</p>
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#de">Zur Konto- &amp; Datenlöschung</a></div>
         <h3>Internationale Rechte (USA CCPA/CPRA, UK, Brasilien, Schweiz, Kanada)</h3>
-        <p>CatWell <strong>verkauft</strong> und <strong>teilt keine</strong> personenbezogenen Daten für personalisierte Werbung (<em>Do Not Sell or Share</em>). Nutzer in den USA (CCPA/CPRA), Großbritannien (UK GDPR), Brasilien (LGPD), der Schweiz (nDSG) und Kanada (PIPEDA) können entsprechende Rechte diskriminierungsfrei über <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a> ausüben.</p>
+        <p>ShareATail <strong>verkauft</strong> und <strong>teilt keine</strong> personenbezogenen Daten für personalisierte Werbung (<em>Do Not Sell or Share</em>). Nutzer in den USA (CCPA/CPRA), Großbritannien (UK GDPR), Brasilien (LGPD), der Schweiz (nDSG) und Kanada (PIPEDA) können entsprechende Rechte diskriminierungsfrei über <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a> ausüben.</p>
         <h3>Kinder (DSGVO &amp; US COPPA)</h3>
-        <p>CatWell richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine Kinderdaten.</p>
-        <div class="callout"><strong>Tierärztlicher Hinweis:</strong> Alle Rasse-, Ernährungs-, Verhaltens- und KI-Inhalte sind rein informativ und ersetzen niemals einen Tierarzt.</div>
+        <p>ShareATail richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine Kinderdaten.</p>
+        <div class="callout"><strong>Tierärztlicher Hinweis:</strong> Alle Rasse-, Ernährungs-, Verhaltens- und KI-Inhalte für Katzen und Hunde sind rein informativ und ersetzen niemals einen Tierarzt.</div>
       </section>
     </div>
 
@@ -418,14 +418,14 @@
     <div data-lang="ro" id="ro" class="lang-hidden">
       <section class="hero">
         <span class="eyebrow">Politică de Confidențialitate • GDPR &amp; Internațional</span>
-        <h1>Politica de Confidențialitate CatWell</h1>
+        <h1>Politica de Confidențialitate ShareATail</h1>
         <p class="lead">
-          Această politică explică modul în care aplicația Android <strong>CatWell</strong> colectează,
-          utilizează, stochează și protejează datele personale în conformitate cu GDPR, legislația
-          internațională și politicile Google Play.
+          Această politică explică modul în care aplicația Android <strong>ShareATail</strong> (fostă
+          CatWell) colectează, utilizează, stochează și protejează datele personale în conformitate cu
+          GDPR, legislația internațională și politicile Google Play.
         </p>
         <div class="meta-row">
-          <span><strong>Ultima actualizare:</strong> 22 Noiembrie 2026</span>
+          <span><strong>Ultima actualizare:</strong> 27 Noiembrie 2026</span>
           <span><strong>Pachet:</strong> <code>com.gabrielo.catwell</code></span>
           <span><strong>Operator:</strong> Gabriele O. (<a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>)</span>
         </div>
@@ -433,22 +433,22 @@
 
       <section class="card">
         <h2>1. Operatorul de date și contact</h2>
-        <p>Operatorul de date pentru <strong>CatWell</strong> este dezvoltatorul independent <strong>Gabriele O.</strong> — contact confidențialitate: <a href="mailto:devapp.gabrielo@gmail.com?subject=Confidentialitate%20CatWell"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
+        <p>Operatorul de date pentru <strong>ShareATail</strong> este dezvoltatorul independent <strong>Gabriele O.</strong> — contact confidențialitate: <a href="mailto:devapp.gabrielo@gmail.com?subject=Confidentialitate%20ShareATail"><strong>devapp.gabrielo@gmail.com</strong></a>.</p>
       </section>
 
       <section class="card">
         <h2>2. Datele prelucrate și stocarea</h2>
-        <p>CatWell are o arhitectură <strong>offline-first</strong>: poți folosi jurnalul local fără cont. Autentificarea cu Google și backup-ul în cloud sunt complet opționale.</p>
+        <p>ShareATail are o arhitectură <strong>offline-first</strong>: poți folosi jurnalul local pentru pisicile și câinii tăi (Tails) fără cont. Autentificarea cu Google și backup-ul în cloud sunt complet opționale.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Categorie</th><th>Exemple</th><th>Stocare</th><th>Obligatoriu?</th></tr></thead>
             <tbody>
               <tr><td><strong>Cont Google</strong></td><td>UID Firebase, adresă email, nume afișat.</td><td>Firebase Authentication și Cloud Firestore.</td><td>Nu (doar pentru Backup Cloud / Familie).</td></tr>
-              <tr><td><strong>Profile pisici și jurnal</strong></td><td>Nume, rasă, data nașterii, greutate, microcip, vaccinuri, vizite, îngrijire, note, povești și miniaturi foto.</td><td>Bază locală (Room) și, dacă ești conectat, Cloud Firestore.</td><td>Introduse voluntar.</td></tr>
-              <tr><td><strong>Veterinar și setări</strong></td><td>Date clinică veterinară, limbă, temă, unitate greutate, ore notificări.</td><td>Exclusiv în stocarea privată a dispozitivului.</td><td>Opțional.</td></tr>
-              <tr><td><strong>Fotografii pentru AI</strong></td><td>Imagini alese pentru Scanner Rase AI sau AI Story.</td><td>Procesate la cerere prin Google Gemini (Firebase AI Logic sau cheie personală).</td><td>Nu (doar la acțiunea utilizatorului).</td></tr>
+              <tr><td><strong>Profile pisici/câini și jurnal</strong></td><td>Specie (pisică sau câine), nume, rasă, data nașterii, greutate, microcip, vaccinuri, vizite, îngrijire, note, povești și miniaturi foto.</td><td>Bază locală (Room) și, dacă ești conectat, Cloud Firestore.</td><td>Introduse voluntar.</td></tr>
+              <tr><td><strong>Veterinar și setări</strong></td><td>Date clinică veterinară, limbă, temă, unitate greutate, ore notificări.</td><td>Stocare privată pe dispozitiv (și grupul de Familie, dacă este partajat).</td><td>Opțional.</td></tr>
+              <tr><td><strong>Fotografii pentru AI</strong></td><td>Imagini cu pisici sau câini alese pentru Scanner Rase AI sau AI Story.</td><td>Procesate la cerere prin Google Gemini (Firebase AI Logic sau cheie personală).</td><td>Nu (doar la acțiunea utilizatorului).</td></tr>
               <tr><td><strong>Cheie API Gemini personală</strong></td><td>Cheie opțională Google AI Studio introdusă în Setări.</td><td><strong>Doar local</strong>, criptată cu <strong>Android Keystore (AES-256-GCM)</strong>. Nu se încarcă niciodată în Firestore.</td><td>Nu (opțională).</td></tr>
-              <tr><td><strong>Securitate și integritate</strong></td><td>Token-uri anti-abuz Firebase App Check / reCAPTCHA Enterprise.</td><td>Procesate de Google Firebase pentru protecția API-urilor.</td><td>Automat la utilizarea serviciilor Firebase.</td></tr>
+              <tr><td><strong>Securitate și integritate</strong></td><td>Token-uri anti-abuz Firebase App Check / Play Integrity / reCAPTCHA Enterprise.</td><td>Procesate de Google Firebase pentru protecția API-urilor.</td><td>Automat la utilizarea serviciilor Firebase.</td></tr>
             </tbody>
           </table>
         </div>
@@ -459,7 +459,7 @@
         <h2>3. Procesare AI și Permisiuni Android</h2>
         <p><strong>Scanner Rase AI</strong> și <strong>AI Story</strong> trimit imaginile selectate (după pre-filtrare locală cu Google ML Kit) către <strong>Google Gemini</strong> prin Firebase AI Logic sau cheia ta personală opțională. Rezultatele au doar scop informativ și creativ.</p>
         <ul>
-          <li><code>CAMERA</code> (opțională): realizarea de fotografii pisicii.</li>
+          <li><code>CAMERA</code> (opțională): realizarea de fotografii pisicii sau câinelui tău.</li>
           <li><code>POST_NOTIFICATIONS</code> (opțională, Android 13+): notificări pentru vaccinuri, vizite și îngrijire.</li>
           <li><code>SCHEDULE_EXACT_ALARM</code>: livrarea la timp a memento-urilor medicale programate (cu fallback automat).</li>
           <li><code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>INTERNET</code>: restaurare notificări la repornire, vibrație și acces cloud/AI.</li>
@@ -469,7 +469,7 @@
 
       <section class="card">
         <h2>4. Furnizori terți și Securitate</h2>
-        <p>CatWell folosește exclusiv <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / reCAPTCHA Enterprise) ca persoane împuternicite (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), cu Clauze Contractuale Standard (SCC) pentru transferuri internaționale.</p>
+        <p>ShareATail folosește exclusiv <strong>Google LLC / Firebase</strong> (Authentication, Firestore, AI Logic / Gemini API, App Check / Play Integrity / reCAPTCHA Enterprise) ca persoane împuternicite (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>), cu Clauze Contractuale Standard (SCC) pentru transferuri internaționale.</p>
         <ul>
           <li>Trafic exclusiv <strong>HTTPS/TLS</strong> (HTTP necriptat blocat).</li>
           <li>Backup automat necriptat dezactivat (<code>allowBackup=false</code>); cheia API personală este criptată cu Android Keystore.</li>
@@ -482,16 +482,16 @@
         <p>Conform GDPR (art. 15–22), ai dreptul de acces, rectificare, ștergere, restricționare, opoziție și plângere la autoritatea de supraveghere. Poți șterge contul și datele din <em>Setări → Confidențialitate și date → Șterge contul și toate datele</em> sau pe pagina noastră dedicată:</p>
         <div class="btn-row"><a class="btn btn-primary" href="account-deletion.html#ro">Pagina de Ștergere Cont și Date</a></div>
         <h3>Drepturi internaționale (SUA CCPA/CPRA, UK, Brazilia, Elveția, Canada)</h3>
-        <p>CatWell <strong>nu vinde</strong> și <strong>nu partajează</strong> date personale pentru publicitate comportamentală (<em>Do Not Sell or Share</em>). Utilizatorii din SUA (CCPA/CPRA), Marea Britanie (UK GDPR), Brazilia (LGPD), Elveția (nFADP) și Canada (PIPEDA) beneficiază de drepturi echivalente fără discriminare scriind la <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
+        <p>ShareATail <strong>nu vinde</strong> și <strong>nu partajează</strong> date personale pentru publicitate comportamentală (<em>Do Not Sell or Share</em>). Utilizatorii din SUA (CCPA/CPRA), Marea Britanie (UK GDPR), Brazilia (LGPD), Elveția (nFADP) și Canada (PIPEDA) beneficiază de drepturi echivalente fără discriminare scriind la <a href="mailto:devapp.gabrielo@gmail.com">devapp.gabrielo@gmail.com</a>.</p>
         <h3>Minori (GDPR &amp; COPPA SUA)</h3>
-        <p>CatWell nu se adresează copiilor sub 13 ani și nu colectează cu bună știință datele acestora.</p>
-        <div class="callout"><strong>Notă veterinară:</strong> toate informațiile despre rase, nutriție, comportament și rezultatele AI sunt exclusiv informative și nu înlocuiesc medicul veterinar.</div>
+        <p>ShareATail nu se adresează copiilor sub 13 ani și nu colectează cu bună știință datele acestora.</p>
+        <div class="callout"><strong>Notă veterinară:</strong> toate informațiile despre rase de pisici și câini, nutriție, comportament și rezultatele AI sunt exclusiv informative și nu înlocuiesc medicul veterinar.</div>
       </section>
     </div>
   </main>
 
   <footer class="site-footer">
-    <span>© 2026 CatWell — Gabriele O.</span>
+    <span>© 2026 ShareATail — Gabriele O.</span>
     <span><a href="index.html">Support</a> · <a href="account-deletion.html">Account Deletion</a></span>
   </footer>
 
@@ -523,7 +523,7 @@
           if (labels[key]) el.textContent = labels[key];
         });
         if (persist) {
-          try { sessionStorage.setItem('catwell_legal_lang', lang); } catch (e) {}
+          try { sessionStorage.setItem('shareatail_legal_lang', lang); } catch (e) {}
         }
       }
       function detectInitialLang() {
@@ -535,7 +535,7 @@
           if (hash === '#' + code || hash.indexOf('#' + code + '-') === 0) return code;
         }
         try {
-          var saved = sessionStorage.getItem('catwell_legal_lang');
+          var saved = sessionStorage.getItem('shareatail_legal_lang') || sessionStorage.getItem('catwell_legal_lang');
           if (SUPPORTED.indexOf(saved) !== -1) return saved;
         } catch (e) {}
         var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase().slice(0, 2);
